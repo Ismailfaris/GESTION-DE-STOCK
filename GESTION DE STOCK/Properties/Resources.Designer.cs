@@ -63,6 +63,36 @@ namespace GESTION_DE_STOCK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download1 {
+            get {
+                object obj = ResourceManager.GetObject("download1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-add-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_administrator_male_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-administrator-male-32", resourceCulture);
@@ -86,6 +116,16 @@ namespace GESTION_DE_STOCK.Properties {
         internal static System.Drawing.Bitmap icons8_checked_user_male_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-checked-user-male-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_window_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-close-window-35", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +186,48 @@ namespace GESTION_DE_STOCK.Properties {
         internal static System.Drawing.Bitmap icons8_trolley_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-trolley-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_update_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-update-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_waste_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-waste-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_rectangle_red_red_brick_pattern_background_5a7fed046b6241_2922401915183331884399 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-rectangle-red-red-brick-pattern-background-5a7fed046b6241.292240191518333" +
+                        "1884399", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_background_texture_with_triangles_design_template_86a93ad46b88ad98d899cc62ebb89bcf_screen {
+            get {
+                object obj = ResourceManager.GetObject("red-background-texture-with-triangles-design-template-86a93ad46b88ad98d899cc62ebb" +
+                        "89bcf_screen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

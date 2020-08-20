@@ -40,5 +40,18 @@ namespace GESTION_DE_STOCK
             else
                 panel1.Size = new Size(256, 567);
         }
+
+        private void btnclient_Click(object sender, EventArgs e)
+        {
+            if (!pnlshow.Controls.Contains(USER_LIST_CLIENT.Instance))
+            {
+                pnlshow.Controls.Add(USER_LIST_CLIENT.Instance);
+                USER_LIST_CLIENT.Instance.Dock = DockStyle.Fill;
+                USER_LIST_CLIENT.Instance.BringToFront();
+            }
+            else
+                USER_LIST_CLIENT.Instance.BringToFront();
+            
+        }
     }
 }

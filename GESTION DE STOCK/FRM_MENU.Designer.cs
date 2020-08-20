@@ -32,12 +32,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnclient = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.pnlshow = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(343, 567);
+            this.panel1.Size = new System.Drawing.Size(343, 720);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -62,7 +63,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(343, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(856, 10);
+            this.panel2.Size = new System.Drawing.Size(794, 10);
             this.panel2.TabIndex = 1;
             // 
             // button2
@@ -72,7 +73,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_minimize_window_32;
-            this.button2.Location = new System.Drawing.Point(1099, 12);
+            this.button2.Location = new System.Drawing.Point(1037, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(47, 36);
             this.button2.TabIndex = 3;
@@ -86,12 +87,28 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_shutdown_32;
-            this.button1.Location = new System.Drawing.Point(1152, 12);
+            this.button1.Location = new System.Drawing.Point(1090, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 36);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_list_48;
+            this.button7.Location = new System.Drawing.Point(276, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(62, 55);
+            this.button7.TabIndex = 9;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // button6
             // 
@@ -177,28 +194,25 @@
             this.btnclient.TabIndex = 4;
             this.btnclient.Text = "Client";
             this.btnclient.UseVisualStyleBackColor = true;
+            this.btnclient.Click += new System.EventHandler(this.btnclient_Click);
             // 
-            // button7
+            // pnlshow
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_list_48;
-            this.button7.Location = new System.Drawing.Point(276, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(62, 55);
-            this.button7.TabIndex = 9;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            this.pnlshow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlshow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlshow.Location = new System.Drawing.Point(343, 54);
+            this.pnlshow.Name = "pnlshow";
+            this.pnlshow.Size = new System.Drawing.Size(794, 666);
+            this.pnlshow.TabIndex = 4;
             // 
             // FRM_MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1199, 567);
+            this.ClientSize = new System.Drawing.Size(1137, 720);
+            this.Controls.Add(this.pnlshow);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
@@ -224,5 +238,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Panel pnlshow;
     }
 }
