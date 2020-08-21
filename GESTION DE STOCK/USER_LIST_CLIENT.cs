@@ -17,11 +17,11 @@ namespace GESTION_DE_STOCK
         {
             get
             {
-                if(Userclient==null)
+                if (Userclient == null)
                 {
                     Userclient = new USER_LIST_CLIENT();
                 }
-                return Userclient;  
+                return Userclient;
             }
         }
         public USER_LIST_CLIENT()
@@ -29,7 +29,12 @@ namespace GESTION_DE_STOCK
             InitializeComponent();
         }
 
-        private void btn_addC_Click(object sender, EventArgs e)
+        private void USER_LIST_CLIENT_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAddC_Click(object sender, EventArgs e)
         {
             AddClient AC = new AddClient();
             AC.ShowDialog();

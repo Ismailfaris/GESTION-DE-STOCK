@@ -26,5 +26,10 @@ namespace GESTION_DE_STOCK
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
