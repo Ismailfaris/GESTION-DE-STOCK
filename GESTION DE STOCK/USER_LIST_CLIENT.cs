@@ -30,22 +30,45 @@ namespace GESTION_DE_STOCK
             InitializeComponent();
         }
         DBCLASS B = new DBCLASS();
+
         private void USER_LIST_CLIENT_Load(object sender, EventArgs e)
         {
-            B.CONNECTER();
-            comboBox1.Items.Clear();
-            B.da = new SqlDataAdapter("SELECT [ID_CLIENT],[NOM_CLIENT]FROM[CLIENT]", B.con);
-            B.da.Fill(B.ds, "CL");
-            comboBox1.DataSource = B.ds.Tables["CL"];
-            comboBox1.DisplayMember = "NOM_CLIENT";
-            comboBox1.ValueMember = "ID_CLIENT";
-
+            B.Open();
+            
+            if (B.ds.Tables["CLIENT"] != null)
+            {
+                B.ds.Tables["CLIENT"].Clear();
+            }
+            B.da = new SqlDataAdapter("SELECT [ID_CLIENT],[NOM_CLIENT],[PRENOM_CLIENT],[ADRESSE_CLIENT],[TELEPHONE_CLIENT],[PAYS_CLIENT],[VILLE_CLIENT],[EMAIL]FROM[CLIENT]", B.cnx);
+            B.da.Fill(B.ds, "CLIENT");
+            dataGridView1.DataSource = B.ds.Tables["CLIENT"];
         }
 
         private void BtnAddC_Click(object sender, EventArgs e)
         {
             AddClient AC = new AddClient();
             AC.ShowDialog();
+        }
+
+        private void BtnSearchC_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void CMBCLIENT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (B.ds.Tables["CLIENT"] != null)
+            {
+                B.ds.Tables["CLIENT"].Clear();
+            }
+            B.da = new SqlDataAdapter("SELECT [ID_CLIENT],[NOM_CLIENT],[PRENOM_CLIENT],[ADRESSE_CLIENT],[TELEPHONE_CLIENT],[PAYS_CLIENT],[VILLE_CLIENT],[EMAIL]FROM[CLIENT] where "+ CMBCLIENT.SelectedText + "=" + txtSearch.Text + "", B.cnx);
+            B.da.Fill(B.ds, "CLIENT");
+            dataGridView1.DataSource = B.ds.Tables["CLIENT"];
         }
     }
 }
