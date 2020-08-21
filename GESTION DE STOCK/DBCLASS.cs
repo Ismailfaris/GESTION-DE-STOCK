@@ -13,6 +13,8 @@ namespace GESTION_DE_STOCK
         public SqlConnection con = new SqlConnection();
         public SqlCommand cmd = new SqlCommand();
         public SqlDataReader dr;
+        public SqlDataAdapter da;
+        public DataSet ds=new DataSet();
         public DataTable dt = new DataTable();
 
         public void CONNECTER()

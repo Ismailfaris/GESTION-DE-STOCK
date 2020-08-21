@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace GESTION_DE_STOCK
 {
@@ -28,9 +29,16 @@ namespace GESTION_DE_STOCK
         {
             InitializeComponent();
         }
-
+        DBCLASS B = new DBCLASS();
         private void USER_LIST_CLIENT_Load(object sender, EventArgs e)
         {
+            B.CONNECTER();
+            comboBox1.Items.Clear();
+            B.da = new SqlDataAdapter("SELECT [ID_CLIENT],[NOM_CLIENT]FROM[CLIENT]", B.con);
+            B.da.Fill(B.ds, "CL");
+            comboBox1.DataSource = B.ds.Tables["CL"];
+            comboBox1.DisplayMember = "NOM_CLIENT";
+            comboBox1.ValueMember = "ID_CLIENT";
 
         }
 
