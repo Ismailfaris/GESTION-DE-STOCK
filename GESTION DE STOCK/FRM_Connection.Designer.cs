@@ -39,10 +39,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnQuitter = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnConnect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,28 +95,28 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.Silver;
-            this.txtUsername.Location = new System.Drawing.Point(50, 144);
+            this.txtUsername.Location = new System.Drawing.Point(34, 140);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ShortcutsEnabled = false;
-            this.txtUsername.Size = new System.Drawing.Size(241, 29);
+            this.txtUsername.Size = new System.Drawing.Size(254, 29);
             this.txtUsername.TabIndex = 4;
             this.txtUsername.Text = "Nom d\'utilisateur";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(50, 172);
+            this.panel5.Location = new System.Drawing.Point(34, 168);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(241, 1);
+            this.panel5.Size = new System.Drawing.Size(254, 1);
             this.panel5.TabIndex = 5;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(50, 227);
+            this.panel6.Location = new System.Drawing.Point(34, 223);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(241, 1);
+            this.panel6.Size = new System.Drawing.Size(254, 1);
             this.panel6.TabIndex = 7;
             // 
             // txtPassword
@@ -128,20 +125,19 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Silver;
-            this.txtPassword.Location = new System.Drawing.Point(50, 199);
+            this.txtPassword.Location = new System.Drawing.Point(34, 195);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ShortcutsEnabled = false;
-            this.txtPassword.Size = new System.Drawing.Size(241, 29);
+            this.txtPassword.Size = new System.Drawing.Size(254, 29);
             this.txtPassword.TabIndex = 6;
             this.txtPassword.Text = "Mot de Passe";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_password_32;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 199);
+            this.pictureBox1.Location = new System.Drawing.Point(146, 296);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -149,35 +145,11 @@
             // 
             this.btnQuitter.FlatAppearance.BorderSize = 0;
             this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitter.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_close_window_32;
             this.btnQuitter.Location = new System.Drawing.Point(263, 8);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(32, 31);
             this.btnQuitter.TabIndex = 2;
             this.btnQuitter.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_customer_32;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 144);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 32);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnConnect
-            // 
-            this.btnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(32)))));
-            this.btnConnect.FlatAppearance.BorderSize = 0;
-            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnect.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConnect.Location = new System.Drawing.Point(15, 274);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(276, 36);
-            this.btnConnect.TabIndex = 9;
-            this.btnConnect.Text = "Se Connecter";
-            this.btnConnect.UseVisualStyleBackColor = false;
             // 
             // FRM_Connection
             // 
@@ -186,8 +158,6 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(303, 407);
-            this.Controls.Add(this.btnConnect);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.txtPassword);
@@ -204,7 +174,6 @@
             this.Text = "FRM_Connection";
             this.Load += new System.EventHandler(this.FRM_Connection_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,7 +192,5 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnConnect;
     }
 }
