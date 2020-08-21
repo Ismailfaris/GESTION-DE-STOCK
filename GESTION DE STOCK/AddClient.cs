@@ -50,7 +50,6 @@ namespace GESTION_DE_STOCK
             try
             {
                 bool empty = chkTextBox_empty();
-                int affRows = 0;
                 if (!empty)
                 {
                     db.cmd = new SqlCommand("insert into " +
