@@ -16,7 +16,7 @@ namespace GESTION_DE_STOCK
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FRM_Connection());
+            Application.Run(new FRM_MENU());
         }
     }
 }

@@ -15,6 +15,30 @@ namespace GESTION_DE_STOCK
         public FRM_MENU()
         {
             InitializeComponent();
+            panel1.Size = new Size(256, 567);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            if (panel1.Width == 256)
+                panel1.Size = new Size(62, 567);
+            else
+                panel1.Size = new Size(256, 567);
         }
     }
 }
