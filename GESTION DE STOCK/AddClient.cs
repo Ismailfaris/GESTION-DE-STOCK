@@ -32,14 +32,7 @@ namespace GESTION_DE_STOCK
         }
         private void clear_fields()
         {
-            bool isEmpty = false;
-            for (int i = 0; i > this.Controls.Count; i++)
-            {
-                if (this.Controls[i].GetType() == txtNom.GetType())
-                {
-                    this.Controls[i].Text = "";
-                }
-            }
+            txtNom.Text = txtPrenom.Text = txtAddress.Text = txtEmail.Text = txtPays.Text = txtTele.Text = txtVille.Text = "";
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -63,6 +56,7 @@ namespace GESTION_DE_STOCK
                     db.cmd = new SqlCommand("insert into " +
                         "CLIENT( NOM_CLIENT, PRENOM_CLIENT, ADRESSE_CLIENT, TELEPHONE_CLIENT, PAYS_CLIENT, VILLE_CLIENT, EMAIL)"
                         + "values(@nom, @prenom, @adresse, @telephone, @pays, @ville, @email)");
+                    db.cmd.Connection = db.cnx;
                     db.cmd.Parameters.AddWithValue("@nom", txtNom.Text);
                     db.cmd.Parameters.AddWithValue("@prenom", txtPrenom.Text);
                     db.cmd.Parameters.AddWithValue("@adresse", txtAddress.Text);
@@ -73,13 +67,8 @@ namespace GESTION_DE_STOCK
                     db.Open();
                     db.cmd.ExecuteNonQuery();
                     db.Close();
-                    if (affRows > 0)
-                    {
-                        clear_fields();
-                        MessageBox.Show("Ajouter");
-                    }
-                    else
-                        MessageBox.Show("Une erreur c'est produit, ressayer !");
+                    clear_fields();
+                    MessageBox.Show("Ajouter");
 
                 }
                 else
