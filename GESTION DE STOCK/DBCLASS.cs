@@ -17,7 +17,7 @@ namespace GESTION_DE_STOCK
 
         public DBCLASS()
         {
-            cnx.ConnectionString = "Data Source=localost;Initial Catalog=DBSTOCK;Integrated Security=True";
+            cnx.ConnectionString = "Data Source=localhost;Initial Catalog=DBSTOCK;Integrated Security=True";
         }
         public DBCLASS(string cnxString)
         {
