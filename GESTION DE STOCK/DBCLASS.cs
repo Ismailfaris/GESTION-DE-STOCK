@@ -10,28 +10,36 @@ namespace GESTION_DE_STOCK
 {
     class DBCLASS
     {
-        public SqlConnection con = new SqlConnection();
+        public SqlConnection cnx = new SqlConnection();
         public SqlCommand cmd = new SqlCommand();
         public SqlDataReader dr;
         public SqlDataAdapter da;
         public DataSet ds=new DataSet();
         public DataTable dt = new DataTable();
 
-        public void CONNECTER()
+        public DBCLASS()
         {
-            if (con.State == ConnectionState.Closed || con.State == ConnectionState.Broken)
-            {
-                con.ConnectionString = "Data Source=DESKTOP-1NG7LRA;Initial Catalog=DBSTOCK;Integrated Security=True";
-                con.Open();
-            }
-
+            cnx.ConnectionString = "Data Source=localost;Initial Catalog=DBSTOCK;Integrated Security=True";
         }
-        public void DECONNECTER()
+        public DBCLASS(string cnxString)
         {
-            if (con.State == ConnectionState.Open)
+            cnx.ConnectionString = cnxString;
+        }
+        
+        public void Open()
+        {
+            if (cnx.State == ConnectionState.Closed)
             {
 
-                con.Close();
+                cnx.Open();
+            }
+        }
+        public void Close()
+        {
+            if (cnx.State == ConnectionState.Open)
+            {
+
+                cnx.Close();
             }
         }
     }
