@@ -33,7 +33,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.chkGrd = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.BtnUpdateC = new System.Windows.Forms.Button();
             this.BtnDeleteC = new System.Windows.Forms.Button();
             this.BtnAddC = new System.Windows.Forms.Button();
@@ -78,9 +77,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.chkGrd});
             this.dataGridView1.Location = new System.Drawing.Point(115, 311);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -88,14 +86,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(935, 340);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // chkGrd
-            // 
-            this.chkGrd.HeaderText = "Select";
-            this.chkGrd.Name = "chkGrd";
-            this.chkGrd.ReadOnly = true;
-            this.chkGrd.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.chkGrd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // BtnUpdateC
             // 
@@ -199,6 +189,5 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn chkGrd;
     }
 }

@@ -37,10 +37,10 @@ namespace GESTION_DE_STOCK
             {
                 B.ds.Tables["CLIENT"].Clear();
             }
-            B.da = new SqlDataAdapter("SELECT [ID_CLIENT],[NOM_CLIENT],[PRENOM_CLIENT],[ADRESSE_CLIENT],[TELEPHONE_CLIENT],[PAYS_CLIENT],[VILLE_CLIENT],[EMAIL]FROM[CLIENT]", B.cnx);
+            B.da = new SqlDataAdapter("SELECT [NOM_CLIENT],[PRENOM_CLIENT],[ADRESSE_CLIENT],[TELEPHONE_CLIENT],[PAYS_CLIENT],[VILLE_CLIENT],[EMAIL]FROM[CLIENT]", B.cnx);
             B.da.Fill(B.ds, "CLIENT");
-            dataGridView1.DataSource = B.ds.Tables["CLIENT"];
 
+            dataGridView1.DataSource = B.ds.Tables["CLIENT"];
             //Replissage du combo box
             string[] comboText = { "Nom", "Prenom", "Telephon", "Ville", "Pays" };
             //string[] comboValues = { "ID_CLIENT", "NOM_CLIENT", "PRENOM_CLIENT", "ADRESSE_CLIENT", "TELEPHONE_CLIENT", "PAYS_CLIENT", "VILLE_CLIENT", "EMAIL" };
