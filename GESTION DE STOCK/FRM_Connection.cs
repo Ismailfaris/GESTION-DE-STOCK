@@ -31,5 +31,15 @@ namespace GESTION_DE_STOCK
         {
 
         }
+
+        private void txtUsername_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtUsername.Text = "";
+        }
+
+        private void txtPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtPassword.Text = "";
+        }
     }
 }

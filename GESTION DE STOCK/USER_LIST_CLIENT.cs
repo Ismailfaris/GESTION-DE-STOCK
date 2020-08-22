@@ -42,6 +42,12 @@ namespace GESTION_DE_STOCK
             B.da = new SqlDataAdapter("SELECT [ID_CLIENT],[NOM_CLIENT],[PRENOM_CLIENT],[ADRESSE_CLIENT],[TELEPHONE_CLIENT],[PAYS_CLIENT],[VILLE_CLIENT],[EMAIL]FROM[CLIENT]", B.cnx);
             B.da.Fill(B.ds, "CLIENT");
             dataGridView1.DataSource = B.ds.Tables["CLIENT"];
+
+            //Replissage du combo box
+            //string[] comboText = { "ID", "Nom", "Prenom", "Telephon", "Email", "Ville", "Pays" };
+            string[] comboValues = { "ID_CLIENT", "NOM_CLIENT", "PRENOM_CLIENT", "ADRESSE_CLIENT", "TELEPHONE_CLIENT", "PAYS_CLIENT", "VILLE_CLIENT", "EMAIL" };
+            CMBCLIENT.Items.AddRange(comboValues);
+            
         }
 
         private void BtnAddC_Click(object sender, EventArgs e)
@@ -66,9 +72,14 @@ namespace GESTION_DE_STOCK
             {
                 B.ds.Tables["CLIENT"].Clear();
             }
-            B.da = new SqlDataAdapter("SELECT [ID_CLIENT],[NOM_CLIENT],[PRENOM_CLIENT],[ADRESSE_CLIENT],[TELEPHONE_CLIENT],[PAYS_CLIENT],[VILLE_CLIENT],[EMAIL]FROM[CLIENT] where "+ CMBCLIENT.SelectedText + "=" + txtSearch.Text + "", B.cnx);
+            B.da = new SqlDataAdapter("SELECT [ID_CLIENT],[NOM_CLIENT],[PRENOM_CLIENT],[ADRESSE_CLIENT],[TELEPHONE_CLIENT],[PAYS_CLIENT],[VILLE_CLIENT],[EMAIL]FROM[CLIENT] where "+ CMBCLIENT.SelectedText + "=" + textBox1.Text + "", B.cnx);
             B.da.Fill(B.ds, "CLIENT");
             dataGridView1.DataSource = B.ds.Tables["CLIENT"];
+        }
+
+        private void textBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox1.Text = "";
         }
     }
 }
