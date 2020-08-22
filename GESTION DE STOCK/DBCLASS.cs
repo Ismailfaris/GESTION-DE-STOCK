@@ -10,6 +10,7 @@ namespace GESTION_DE_STOCK
 {
     class DBCLASS
     {
+        
         public SqlConnection cnx = new SqlConnection();
         public SqlCommand cmd = new SqlCommand();
         public SqlDataReader dr;
@@ -18,7 +19,7 @@ namespace GESTION_DE_STOCK
         public DataTable dt = new DataTable();
         public DBCLASS()
         {
-            cnx.ConnectionString = "Data Source=localhost;Initial Catalog=DBSTOCK;Integrated Security=True";
+            cnx.ConnectionString = "Server=tcp:devm.database.windows.net,1433;Initial Catalog=DBSTOCK;Persist Security Info=False;User ID=su;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         }
         public DBCLASS(string cnxString)
         {

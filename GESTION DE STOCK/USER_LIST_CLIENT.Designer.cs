@@ -160,24 +160,11 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(273, 202);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(241, 24);
-            this.comboBox1.TabIndex = 3;
+            
             // 
             // BtnSearchC
             // 
-            this.BtnSearchC.BackColor = System.Drawing.Color.White;
-            this.BtnSearchC.FlatAppearance.BorderSize = 0;
-            this.BtnSearchC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSearchC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.BtnSearchC.Location = new System.Drawing.Point(558, 183);
-            this.BtnSearchC.Name = "BtnSearchC";
-            this.BtnSearchC.Size = new System.Drawing.Size(182, 43);
-            this.BtnSearchC.TabIndex = 4;
-            this.BtnSearchC.Text = "Search";
-            this.BtnSearchC.UseVisualStyleBackColor = false;
+            
             // 
             // panel2
             // 
