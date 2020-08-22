@@ -33,10 +33,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.chkGrd = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.BtnUpdateC = new System.Windows.Forms.Button();
             this.BtnDeleteC = new System.Windows.Forms.Button();
             this.BtnAddC = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,20 +52,18 @@
             // CMBCLIENT
             // 
             this.CMBCLIENT.FormattingEnabled = true;
-            this.CMBCLIENT.Items.AddRange(new object[] {
-            "ID_CLIENT"});
-            this.CMBCLIENT.Location = new System.Drawing.Point(273, 202);
+            this.CMBCLIENT.Location = new System.Drawing.Point(219, 204);
             this.CMBCLIENT.Name = "CMBCLIENT";
-            this.CMBCLIENT.Size = new System.Drawing.Size(241, 24);
+            this.CMBCLIENT.Size = new System.Drawing.Size(241, 21);
             this.CMBCLIENT.TabIndex = 3;
             this.CMBCLIENT.SelectedIndexChanged += new System.EventHandler(this.CMBCLIENT_SelectedIndexChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(546, 225);
+            this.panel2.Location = new System.Drawing.Point(475, 222);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(197, 10);
+            this.panel2.Size = new System.Drawing.Size(402, 10);
             this.panel2.TabIndex = 5;
             // 
             // panel3
@@ -75,29 +74,28 @@
             this.panel3.Size = new System.Drawing.Size(935, 10);
             this.panel3.TabIndex = 6;
             // 
-            this.BtnDeleteC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.BtnDeleteC.FlatAppearance.BorderSize = 0;
-            this.BtnDeleteC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDeleteC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeleteC.ForeColor = System.Drawing.Color.White;
-            this.BtnDeleteC.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_waste_35;
-            this.BtnDeleteC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDeleteC.Location = new System.Drawing.Point(569, 71);
-            this.BtnDeleteC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BtnDeleteC.Name = "BtnDeleteC";
-            this.BtnDeleteC.Size = new System.Drawing.Size(218, 49);
-            this.BtnDeleteC.TabIndex = 1;
-            this.BtnDeleteC.Text = "Delete";
-            this.BtnDeleteC.UseVisualStyleBackColor = false;
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 311);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.chkGrd});
+            this.dataGridView1.Location = new System.Drawing.Point(115, 311);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1137, 362);
+            this.dataGridView1.Size = new System.Drawing.Size(935, 340);
             this.dataGridView1.TabIndex = 7;
+            // 
+            // chkGrd
+            // 
+            this.chkGrd.HeaderText = "Select";
+            this.chkGrd.Name = "chkGrd";
+            this.chkGrd.ReadOnly = true;
+            this.chkGrd.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.chkGrd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // BtnUpdateC
             // 
@@ -108,8 +106,8 @@
             this.BtnUpdateC.ForeColor = System.Drawing.Color.White;
             this.BtnUpdateC.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_update_35;
             this.BtnUpdateC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUpdateC.Location = new System.Drawing.Point(331, 71);
-            this.BtnUpdateC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnUpdateC.Location = new System.Drawing.Point(475, 71);
+            this.BtnUpdateC.Margin = new System.Windows.Forms.Padding(2);
             this.BtnUpdateC.Name = "BtnUpdateC";
             this.BtnUpdateC.Size = new System.Drawing.Size(218, 49);
             this.BtnUpdateC.TabIndex = 1;
@@ -125,9 +123,10 @@
             this.BtnDeleteC.ForeColor = System.Drawing.Color.White;
             this.BtnDeleteC.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_waste_35;
             this.BtnDeleteC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDeleteC.Location = new System.Drawing.Point(759, 87);
+            this.BtnDeleteC.Location = new System.Drawing.Point(832, 71);
+            this.BtnDeleteC.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDeleteC.Name = "BtnDeleteC";
-            this.BtnDeleteC.Size = new System.Drawing.Size(291, 60);
+            this.BtnDeleteC.Size = new System.Drawing.Size(218, 49);
             this.BtnDeleteC.TabIndex = 1;
             this.BtnDeleteC.Text = "Delete";
             this.BtnDeleteC.UseVisualStyleBackColor = false;
@@ -141,8 +140,8 @@
             this.BtnAddC.ForeColor = System.Drawing.Color.White;
             this.BtnAddC.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_add_35;
             this.BtnAddC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddC.Location = new System.Drawing.Point(86, 71);
-            this.BtnAddC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAddC.Location = new System.Drawing.Point(115, 71);
+            this.BtnAddC.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAddC.Name = "BtnAddC";
             this.BtnAddC.Size = new System.Drawing.Size(218, 49);
             this.BtnAddC.TabIndex = 0;
@@ -150,54 +149,25 @@
             this.BtnAddC.UseVisualStyleBackColor = false;
             this.BtnAddC.Click += new System.EventHandler(this.BtnAddC_Click);
             // 
-            // txtSearch
+            // textBox1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(115, 163);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(935, 10);
-            this.panel1.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            
-            // 
-            // BtnSearchC
-            // 
-            
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(546, 225);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(197, 10);
-            this.panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel3.Location = new System.Drawing.Point(115, 261);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(935, 10);
-            this.panel3.TabIndex = 6;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(115, 311);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(935, 340);
-            this.dataGridView1.TabIndex = 7;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(567, 199);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(197, 22);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = "Rechercher";
+            this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             // 
             // USER_LIST_CLIENT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -206,9 +176,9 @@
             this.Controls.Add(this.BtnUpdateC);
             this.Controls.Add(this.BtnDeleteC);
             this.Controls.Add(this.BtnAddC);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "USER_LIST_CLIENT";
-            this.Size = new System.Drawing.Size(853, 585);
+            this.Size = new System.Drawing.Size(1089, 693);
             this.Load += new System.EventHandler(this.USER_LIST_CLIENT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -226,6 +196,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chkGrd;
     }
 }
