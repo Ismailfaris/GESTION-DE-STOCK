@@ -111,7 +111,7 @@
             this.txtUsername.Size = new System.Drawing.Size(323, 36);
             this.txtUsername.TabIndex = 4;
             this.txtUsername.Text = "Nom d\'utilisateur";
-            this.txtUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUsername_MouseClick);
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             // 
             // panel5
             // 
@@ -146,7 +146,7 @@
             this.txtPassword.Size = new System.Drawing.Size(323, 36);
             this.txtPassword.TabIndex = 6;
             this.txtPassword.Text = "Mot de Passe";
-            this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             // 
             // button1
             // 

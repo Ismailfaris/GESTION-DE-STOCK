@@ -82,6 +82,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -102,8 +103,8 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_close_window_35;
-            this.pictureBox5.Location = new System.Drawing.Point(769, -4);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(577, -3);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 33);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -115,8 +116,8 @@
             // 
             this.pictureBox4.BackgroundImage = global::GESTION_DE_STOCK.Properties.Resources.kisspng_rectangle_red_red_brick_pattern_background_5a7fed046b6241_2922401915183331884399;
             this.pictureBox4.Image = global::GESTION_DE_STOCK.Properties.Resources.red_background_texture_with_triangles_design_template_86a93ad46b88ad98d899cc62ebb89bcf_screen;
-            this.pictureBox4.Location = new System.Drawing.Point(1, 535);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(1, 435);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(800, 10);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,8 +128,8 @@
             // 
             this.pictureBox3.BackgroundImage = global::GESTION_DE_STOCK.Properties.Resources.kisspng_rectangle_red_red_brick_pattern_background_5a7fed046b6241_2922401915183331884399;
             this.pictureBox3.Image = global::GESTION_DE_STOCK.Properties.Resources.red_background_texture_with_triangles_design_template_86a93ad46b88ad98d899cc62ebb89bcf_screen;
-            this.pictureBox3.Location = new System.Drawing.Point(795, -2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(596, -2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(11, 546);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,8 +140,8 @@
             // 
             this.pictureBox2.BackgroundImage = global::GESTION_DE_STOCK.Properties.Resources.kisspng_rectangle_red_red_brick_pattern_background_5a7fed046b6241_2922401915183331884399;
             this.pictureBox2.Image = global::GESTION_DE_STOCK.Properties.Resources.red_background_texture_with_triangles_design_template_86a93ad46b88ad98d899cc62ebb89bcf_screen;
-            this.pictureBox2.Location = new System.Drawing.Point(-4, -4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(-3, -3);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(11, 549);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,8 +152,8 @@
             // 
             this.pictureBox1.BackgroundImage = global::GESTION_DE_STOCK.Properties.Resources.kisspng_rectangle_red_red_brick_pattern_background_5a7fed046b6241_2922401915183331884399;
             this.pictureBox1.Image = global::GESTION_DE_STOCK.Properties.Resources.red_background_texture_with_triangles_design_template_86a93ad46b88ad98d899cc62ebb89bcf_screen;
-            this.pictureBox1.Location = new System.Drawing.Point(1, -4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(1, -3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(800, 10);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,8 +162,8 @@
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(149, 130);
-            this.txtNom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNom.Location = new System.Drawing.Point(112, 106);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(235, 22);
             this.txtNom.TabIndex = 13;
@@ -189,8 +190,8 @@
             // 
             // txtPrenom
             // 
-            this.txtPrenom.Location = new System.Drawing.Point(521, 134);
-            this.txtPrenom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrenom.Location = new System.Drawing.Point(391, 109);
+            this.txtPrenom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrenom.Name = "txtPrenom";
             this.txtPrenom.Size = new System.Drawing.Size(235, 22);
             this.txtPrenom.TabIndex = 15;
@@ -207,8 +208,8 @@
             // 
             // txtTele
             // 
-            this.txtTele.Location = new System.Drawing.Point(521, 191);
-            this.txtTele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTele.Location = new System.Drawing.Point(391, 155);
+            this.txtTele.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTele.Name = "txtTele";
             this.txtTele.Size = new System.Drawing.Size(235, 22);
             this.txtTele.TabIndex = 17;
@@ -225,8 +226,8 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(521, 256);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Location = new System.Drawing.Point(391, 208);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(235, 22);
             this.txtEmail.TabIndex = 19;
@@ -243,8 +244,8 @@
             // 
             // txtVille
             // 
-            this.txtVille.Location = new System.Drawing.Point(521, 326);
-            this.txtVille.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVille.Location = new System.Drawing.Point(391, 265);
+            this.txtVille.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtVille.Name = "txtVille";
             this.txtVille.Size = new System.Drawing.Size(235, 22);
             this.txtVille.TabIndex = 21;
@@ -261,8 +262,8 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(149, 226);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAddress.Location = new System.Drawing.Point(112, 184);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(235, 22);
             this.txtAddress.TabIndex = 23;
@@ -279,8 +280,8 @@
             // 
             // txtPays
             // 
-            this.txtPays.Location = new System.Drawing.Point(149, 359);
-            this.txtPays.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPays.Location = new System.Drawing.Point(112, 292);
+            this.txtPays.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPays.Name = "txtPays";
             this.txtPays.Size = new System.Drawing.Size(235, 22);
             this.txtPays.TabIndex = 25;
@@ -314,8 +315,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "AddCustomer";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "AddClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddClient";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

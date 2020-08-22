@@ -33,7 +33,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.chkGrd = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.BtnUpdateC = new System.Windows.Forms.Button();
             this.BtnDeleteC = new System.Windows.Forms.Button();
             this.BtnAddC = new System.Windows.Forms.Button();
@@ -52,13 +51,13 @@
             // 
             // CMBCLIENT
             // 
+            this.CMBCLIENT.AllowDrop = true;
             this.CMBCLIENT.FormattingEnabled = true;
             this.CMBCLIENT.Location = new System.Drawing.Point(292, 251);
             this.CMBCLIENT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CMBCLIENT.Name = "CMBCLIENT";
             this.CMBCLIENT.Size = new System.Drawing.Size(320, 24);
             this.CMBCLIENT.TabIndex = 3;
-            this.CMBCLIENT.SelectedIndexChanged += new System.EventHandler(this.CMBCLIENT_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -66,7 +65,7 @@
             this.panel2.Location = new System.Drawing.Point(665, 273);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(272, 12);
+            this.panel2.Size = new System.Drawing.Size(289, 10);
             this.panel2.TabIndex = 5;
             // 
             // panel3
@@ -82,11 +81,11 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chkGrd});
-            this.dataGridView1.Location = new System.Drawing.Point(153, 383);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(115, 311);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -97,12 +96,10 @@
             // chkGrd
             // 
             this.chkGrd.HeaderText = "Select";
-            this.chkGrd.MinimumWidth = 6;
             this.chkGrd.Name = "chkGrd";
             this.chkGrd.ReadOnly = true;
             this.chkGrd.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.chkGrd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.chkGrd.Width = 125;
             // 
             // BtnUpdateC
             // 
@@ -161,14 +158,12 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(665, 244);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(567, 199);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 27);
+            this.textBox1.Size = new System.Drawing.Size(197, 22);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "Rechercher";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             // 
             // USER_LIST_CLIENT
@@ -206,6 +201,5 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn chkGrd;
     }
 }

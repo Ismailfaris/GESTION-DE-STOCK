@@ -30,46 +30,53 @@ namespace GESTION_DE_STOCK
         DBCLASS B = new DBCLASS();
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            B.cnx.Open();
-
-            B.cmd = new SqlCommand("SELECT [NOMUTILISATEUR],[MOT_DE_PASSE],[TYPE_UTILISATEUR]FROM [dbo].[UTILISATEUR]where NOMUTILISATEUR='" + txtUsername.Text + "' and MOT_DE_PASSE='" + txtPassword.Text + "'", B.cnx);
-
-            B.da = new SqlDataAdapter(B.cmd);
-            DataTable dt = new DataTable();
-            B.da.Fill(dt);
-
-            if (dt.Rows.Count > 0)
+            try
             {
-                this.Hide();
-                FRM_MENU f = new FRM_MENU();
-                f.Show();
-            }
-            else if (txtUsername.Text == "")
-            {
-                MessageBox.Show("Compte vide !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (txtPassword.Text == "")
-            {
-                MessageBox.Show("Motdepass vide !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                MessageBox.Show(" Nom de compte ou mot de passe incorrect", "Error",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
-            B.cnx.Close();
+                B.cnx.Open();
+
+                B.cmd = new SqlCommand("SELECT [NOMUTILISATEUR],[MOT_DE_PASSE],[TYPE_UTILISATEUR]FROM [UTILISATEUR] where NOMUTILISATEUR='" + txtUsername.Text + "' and MOT_DE_PASSE='" + txtPassword.Text + "'", B.cnx);
+
+                B.da = new SqlDataAdapter(B.cmd);
+                DataTable dt = new DataTable();
+                B.da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    this.Hide();
+                    FRM_MENU f = new FRM_MENU();
+                    f.Show();
+                }
+                else if (txtUsername.Text == "")
+                {
+                    MessageBox.Show("Compte vide !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtPassword.Text == "")
+                {
+                    MessageBox.Show("Motdepass vide !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(" Nom de compte ou mot de passe incorrect", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                B.cnx.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void txtUsername_MouseClick(object sender, MouseEventArgs e)
+        private void txtUsername_Enter(object sender, EventArgs e)
         {
-            txtUsername.Text = "";
+            txtUsername.Clear();
         }
 
-        private void txtPassword_MouseClick(object sender, MouseEventArgs e)
+        private void txtPassword_Enter(object sender, EventArgs e)
         {
-            txtPassword.Text = "";
+            txtPassword.Clear();
         }
     }
 }
