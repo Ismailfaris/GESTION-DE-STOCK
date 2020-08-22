@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace GESTION_DE_STOCK
 {
-    public partial class AddClient : Form
+    public partial class AddCustomer : Form
     {
         private DBCLASS db = new DBCLASS();
-        public AddClient()
+        public AddCustomer()
         {
             InitializeComponent();
         }

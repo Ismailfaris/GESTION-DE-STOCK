@@ -19,7 +19,7 @@ namespace GESTION_DE_STOCK
         public DataTable dt = new DataTable();
         public DBCLASS()
         {
-            cnx.ConnectionString = "Server=tcp:devm.database.windows.net,1433;Initial Catalog=DBSTOCK;Persist Security Info=False;User ID=su;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            cnx.ConnectionString = "Server=tcp:devm.database.windows.net,1433;Initial Catalog=DBSTOCK;Persist Security Info=False;User ID=su;Password=ism@il123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         }
         public DBCLASS(string cnxString)
         {
@@ -42,5 +42,6 @@ namespace GESTION_DE_STOCK
                 cnx.Close();
             }
         }
+        
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GESTION_DE_STOCK
 {
-    partial class USER_LIST_CLIENT
+    partial class USER_LIST_Customer
     {
         /// <summary> 
         /// Required designer variable.
@@ -44,34 +44,38 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(115, 163);
+            this.panel1.Location = new System.Drawing.Point(153, 201);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(935, 10);
+            this.panel1.Size = new System.Drawing.Size(1247, 12);
             this.panel1.TabIndex = 2;
             // 
             // CMBCLIENT
             // 
             this.CMBCLIENT.FormattingEnabled = true;
-            this.CMBCLIENT.Location = new System.Drawing.Point(219, 204);
+            this.CMBCLIENT.Location = new System.Drawing.Point(292, 251);
+            this.CMBCLIENT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CMBCLIENT.Name = "CMBCLIENT";
-            this.CMBCLIENT.Size = new System.Drawing.Size(241, 21);
+            this.CMBCLIENT.Size = new System.Drawing.Size(320, 24);
             this.CMBCLIENT.TabIndex = 3;
             this.CMBCLIENT.SelectedIndexChanged += new System.EventHandler(this.CMBCLIENT_SelectedIndexChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(475, 222);
+            this.panel2.Location = new System.Drawing.Point(665, 273);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(402, 10);
+            this.panel2.Size = new System.Drawing.Size(272, 12);
             this.panel2.TabIndex = 5;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel3.Location = new System.Drawing.Point(115, 261);
+            this.panel3.Location = new System.Drawing.Point(153, 321);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(935, 10);
+            this.panel3.Size = new System.Drawing.Size(1247, 12);
             this.panel3.TabIndex = 6;
             // 
             // dataGridView1
@@ -81,21 +85,24 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chkGrd});
-            this.dataGridView1.Location = new System.Drawing.Point(115, 311);
+            this.dataGridView1.Location = new System.Drawing.Point(153, 383);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(935, 340);
+            this.dataGridView1.Size = new System.Drawing.Size(1247, 418);
             this.dataGridView1.TabIndex = 7;
             // 
             // chkGrd
             // 
             this.chkGrd.HeaderText = "Select";
+            this.chkGrd.MinimumWidth = 6;
             this.chkGrd.Name = "chkGrd";
             this.chkGrd.ReadOnly = true;
             this.chkGrd.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.chkGrd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.chkGrd.Width = 125;
             // 
             // BtnUpdateC
             // 
@@ -106,10 +113,10 @@
             this.BtnUpdateC.ForeColor = System.Drawing.Color.White;
             this.BtnUpdateC.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_update_35;
             this.BtnUpdateC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUpdateC.Location = new System.Drawing.Point(475, 71);
-            this.BtnUpdateC.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnUpdateC.Location = new System.Drawing.Point(633, 87);
+            this.BtnUpdateC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnUpdateC.Name = "BtnUpdateC";
-            this.BtnUpdateC.Size = new System.Drawing.Size(218, 49);
+            this.BtnUpdateC.Size = new System.Drawing.Size(291, 60);
             this.BtnUpdateC.TabIndex = 1;
             this.BtnUpdateC.Text = "Modifier";
             this.BtnUpdateC.UseVisualStyleBackColor = false;
@@ -123,10 +130,10 @@
             this.BtnDeleteC.ForeColor = System.Drawing.Color.White;
             this.BtnDeleteC.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_waste_35;
             this.BtnDeleteC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDeleteC.Location = new System.Drawing.Point(832, 71);
-            this.BtnDeleteC.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnDeleteC.Location = new System.Drawing.Point(1109, 87);
+            this.BtnDeleteC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnDeleteC.Name = "BtnDeleteC";
-            this.BtnDeleteC.Size = new System.Drawing.Size(218, 49);
+            this.BtnDeleteC.Size = new System.Drawing.Size(291, 60);
             this.BtnDeleteC.TabIndex = 1;
             this.BtnDeleteC.Text = "Delete";
             this.BtnDeleteC.UseVisualStyleBackColor = false;
@@ -140,10 +147,10 @@
             this.BtnAddC.ForeColor = System.Drawing.Color.White;
             this.BtnAddC.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_add_35;
             this.BtnAddC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddC.Location = new System.Drawing.Point(115, 71);
-            this.BtnAddC.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAddC.Location = new System.Drawing.Point(153, 87);
+            this.BtnAddC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAddC.Name = "BtnAddC";
-            this.BtnAddC.Size = new System.Drawing.Size(218, 49);
+            this.BtnAddC.Size = new System.Drawing.Size(291, 60);
             this.BtnAddC.TabIndex = 0;
             this.BtnAddC.Text = "Add";
             this.BtnAddC.UseVisualStyleBackColor = false;
@@ -154,17 +161,19 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(567, 199);
+            this.textBox1.Location = new System.Drawing.Point(665, 244);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 22);
+            this.textBox1.Size = new System.Drawing.Size(272, 27);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "Rechercher";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
             // 
             // USER_LIST_CLIENT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.textBox1);
@@ -176,9 +185,9 @@
             this.Controls.Add(this.BtnUpdateC);
             this.Controls.Add(this.BtnDeleteC);
             this.Controls.Add(this.BtnAddC);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "USER_LIST_CLIENT";
-            this.Size = new System.Drawing.Size(1089, 693);
+            this.Size = new System.Drawing.Size(1452, 853);
             this.Load += new System.EventHandler(this.USER_LIST_CLIENT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

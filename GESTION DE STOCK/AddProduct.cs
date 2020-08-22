@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace GESTION_DE_STOCK
 {
-    public partial class UpdateClient : Form
+    public partial class AddProduct : Form
     {
-        public UpdateClient()
+        public AddProduct()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

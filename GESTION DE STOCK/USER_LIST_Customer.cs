@@ -11,21 +11,21 @@ using System.Data.SqlClient;
 
 namespace GESTION_DE_STOCK
 {
-    public partial class USER_LIST_CLIENT : UserControl
+    public partial class USER_LIST_Customer : UserControl
     {
-        private static USER_LIST_CLIENT Userclient;
-        public static USER_LIST_CLIENT Instance
+        private static USER_LIST_Customer Userclient;
+        public static USER_LIST_Customer Instance
         {
             get
             {
                 if (Userclient == null)
                 {
-                    Userclient = new USER_LIST_CLIENT();
+                    Userclient = new USER_LIST_Customer();
                 }
                 return Userclient;
             }
         }
-        public USER_LIST_CLIENT()
+        public USER_LIST_Customer()
         {
             InitializeComponent();
         }
@@ -52,7 +52,7 @@ namespace GESTION_DE_STOCK
 
         private void BtnAddC_Click(object sender, EventArgs e)
         {
-            AddClient AC = new AddClient();
+            AddCustomer AC = new AddCustomer();
             AC.ShowDialog();
         }
 

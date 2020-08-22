@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddClient.cs">
+    <Compile Include="AddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddClient.Designer.cs">
-      <DependentUpon>AddClient.cs</DependentUpon>
+    <Compile Include="AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="DBCLASS.cs" />
     <Compile Include="FRM_Connection.cs">
@@ -67,20 +79,44 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UpdateClient.cs">
+    <Compile Include="UpdateCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateClient.Designer.cs">
-      <DependentUpon>UpdateClient.cs</DependentUpon>
+    <Compile Include="UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="USER_LIST_CLIENT.cs">
+    <Compile Include="UpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProduct.Designer.cs">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER_LIST_Category.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="USER_LIST_CLIENT.Designer.cs">
-      <DependentUpon>USER_LIST_CLIENT.cs</DependentUpon>
+    <Compile Include="USER_LIST_Category.Designer.cs">
+      <DependentUpon>USER_LIST_Category.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddClient.resx">
-      <DependentUpon>AddClient.cs</DependentUpon>
+    <Compile Include="USER_LIST_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER_LIST_Customer.Designer.cs">
+      <DependentUpon>USER_LIST_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER_LIST_Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USER_LIST_Product.Designer.cs">
+      <DependentUpon>USER_LIST_Product.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_Connection.resx">
       <DependentUpon>FRM_Connection.cs</DependentUpon>
@@ -93,11 +129,20 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateClient.resx">
-      <DependentUpon>UpdateClient.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="USER_LIST_CLIENT.resx">
-      <DependentUpon>USER_LIST_CLIENT.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateProduct.resx">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER_LIST_Category.resx">
+      <DependentUpon>USER_LIST_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER_LIST_Customer.resx">
+      <DependentUpon>USER_LIST_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USER_LIST_Product.resx">
+      <DependentUpon>USER_LIST_Product.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -148,6 +193,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-list-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-photo-gallery-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-synchronize-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-photo-gallery-351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-synchronize-351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-microsoft-excel-2019-35.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

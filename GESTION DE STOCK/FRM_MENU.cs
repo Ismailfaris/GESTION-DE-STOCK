@@ -43,15 +43,39 @@ namespace GESTION_DE_STOCK
 
         private void btnclient_Click(object sender, EventArgs e)
         {
-            if (!pnlshow.Controls.Contains(USER_LIST_CLIENT.Instance))
+            if (!pnlshow.Controls.Contains(USER_LIST_Customer.Instance))
             {
-                pnlshow.Controls.Add(USER_LIST_CLIENT.Instance);
-                USER_LIST_CLIENT.Instance.Dock = DockStyle.Fill;
-                USER_LIST_CLIENT.Instance.BringToFront();
+                pnlshow.Controls.Add(USER_LIST_Customer.Instance);
+                USER_LIST_Customer.Instance.Dock = DockStyle.Fill;
+                USER_LIST_Customer.Instance.BringToFront();
             }
             else
-                USER_LIST_CLIENT.Instance.BringToFront();
+                USER_LIST_Customer.Instance.BringToFront();
             
+        }
+
+        private void BtnProduct_Click(object sender, EventArgs e)
+        {
+            if (!pnlshow.Controls.Contains(USER_LIST_Product.Instance))
+            {
+                pnlshow.Controls.Add(USER_LIST_Product.Instance);
+                USER_LIST_Product.Instance.Dock = DockStyle.Fill;
+                USER_LIST_Product.Instance.BringToFront();
+            }
+            else
+                USER_LIST_Product.Instance.BringToFront();
+        }
+
+        private void BtnCategory_Click(object sender, EventArgs e)
+        {
+            if (!pnlshow.Controls.Contains(USER_LIST_Category.Instance))
+            {
+                pnlshow.Controls.Add(USER_LIST_Category.Instance);
+                USER_LIST_Category.Instance.Dock = DockStyle.Fill;
+                USER_LIST_Category.Instance.BringToFront();
+            }
+            else
+                USER_LIST_Category.Instance.BringToFront();
         }
     }
 }

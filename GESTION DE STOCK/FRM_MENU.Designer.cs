@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.BtnUser = new System.Windows.Forms.Button();
+            this.BtnOrdered = new System.Windows.Forms.Button();
+            this.BtnCategory = new System.Windows.Forms.Button();
+            this.BtnProduct = new System.Windows.Forms.Button();
+            this.btnclient = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnclient = new System.Windows.Forms.Button();
             this.pnlshow = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,16 +46,120 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.BtnUser);
+            this.panel1.Controls.Add(this.BtnOrdered);
+            this.panel1.Controls.Add(this.BtnCategory);
+            this.panel1.Controls.Add(this.BtnProduct);
             this.panel1.Controls.Add(this.btnclient);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(343, 720);
             this.panel1.TabIndex = 0;
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_list_48;
+            this.button7.Location = new System.Drawing.Point(276, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(62, 55);
+            this.button7.TabIndex = 9;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // BtnUser
+            // 
+            this.BtnUser.FlatAppearance.BorderSize = 0;
+            this.BtnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.BtnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.BtnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUser.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnUser.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_administrator_male_32;
+            this.BtnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnUser.Location = new System.Drawing.Point(0, 436);
+            this.BtnUser.Name = "BtnUser";
+            this.BtnUser.Size = new System.Drawing.Size(340, 75);
+            this.BtnUser.TabIndex = 8;
+            this.BtnUser.Text = "User";
+            this.BtnUser.UseVisualStyleBackColor = true;
+            // 
+            // BtnOrdered
+            // 
+            this.BtnOrdered.FlatAppearance.BorderSize = 0;
+            this.BtnOrdered.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.BtnOrdered.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.BtnOrdered.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnOrdered.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOrdered.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnOrdered.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_buy_32;
+            this.BtnOrdered.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnOrdered.Location = new System.Drawing.Point(0, 355);
+            this.BtnOrdered.Name = "BtnOrdered";
+            this.BtnOrdered.Size = new System.Drawing.Size(340, 75);
+            this.BtnOrdered.TabIndex = 7;
+            this.BtnOrdered.Text = "  Ordered";
+            this.BtnOrdered.UseVisualStyleBackColor = true;
+            // 
+            // BtnCategory
+            // 
+            this.BtnCategory.FlatAppearance.BorderSize = 0;
+            this.BtnCategory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.BtnCategory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.BtnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCategory.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCategory.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnCategory.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_opened_folder_32;
+            this.BtnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCategory.Location = new System.Drawing.Point(0, 274);
+            this.BtnCategory.Name = "BtnCategory";
+            this.BtnCategory.Size = new System.Drawing.Size(340, 75);
+            this.BtnCategory.TabIndex = 6;
+            this.BtnCategory.Text = "Category";
+            this.BtnCategory.UseVisualStyleBackColor = true;
+            this.BtnCategory.Click += new System.EventHandler(this.BtnCategory_Click);
+            // 
+            // BtnProduct
+            // 
+            this.BtnProduct.FlatAppearance.BorderSize = 0;
+            this.BtnProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.BtnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.BtnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProduct.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProduct.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnProduct.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_trolley_32;
+            this.BtnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnProduct.Location = new System.Drawing.Point(0, 193);
+            this.BtnProduct.Name = "BtnProduct";
+            this.BtnProduct.Size = new System.Drawing.Size(340, 75);
+            this.BtnProduct.TabIndex = 5;
+            this.BtnProduct.Text = "Product";
+            this.BtnProduct.UseVisualStyleBackColor = true;
+            this.BtnProduct.Click += new System.EventHandler(this.BtnProduct_Click);
+            // 
+            // btnclient
+            // 
+            this.btnclient.FlatAppearance.BorderSize = 0;
+            this.btnclient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btnclient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.btnclient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclient.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclient.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnclient.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_male_user_32;
+            this.btnclient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnclient.Location = new System.Drawing.Point(0, 112);
+            this.btnclient.Name = "btnclient";
+            this.btnclient.Size = new System.Drawing.Size(340, 75);
+            this.btnclient.TabIndex = 4;
+            this.btnclient.Text = "Client";
+            this.btnclient.UseVisualStyleBackColor = true;
+            this.btnclient.Click += new System.EventHandler(this.btnclient_Click);
             // 
             // panel2
             // 
@@ -94,108 +198,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_list_48;
-            this.button7.Location = new System.Drawing.Point(276, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(62, 55);
-            this.button7.TabIndex = 9;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_administrator_male_32;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 436);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(340, 75);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Utilisateur";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_buy_32;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 355);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(340, 75);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "  Commande";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_opened_folder_32;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 274);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(340, 75);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Categorie";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_trolley_32;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 193);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(340, 75);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Produit";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // btnclient
-            // 
-            this.btnclient.FlatAppearance.BorderSize = 0;
-            this.btnclient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.btnclient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.btnclient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclient.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclient.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnclient.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_male_user_32;
-            this.btnclient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnclient.Location = new System.Drawing.Point(0, 112);
-            this.btnclient.Name = "btnclient";
-            this.btnclient.Size = new System.Drawing.Size(340, 75);
-            this.btnclient.TabIndex = 4;
-            this.btnclient.Text = "Client";
-            this.btnclient.UseVisualStyleBackColor = true;
-            this.btnclient.Click += new System.EventHandler(this.btnclient_Click);
-            // 
             // pnlshow
             // 
             this.pnlshow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -233,10 +235,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnclient;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnUser;
+        private System.Windows.Forms.Button BtnOrdered;
+        private System.Windows.Forms.Button BtnCategory;
+        private System.Windows.Forms.Button BtnProduct;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel pnlshow;
     }
