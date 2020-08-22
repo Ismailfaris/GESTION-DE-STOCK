@@ -33,7 +33,7 @@ namespace GESTION_DE_STOCK
             
             B.cnx.Open();
 
-            B.cmd = new SqlCommand("SELECT [NOMUTILISATEUR],[MOT_DE_PASSE],[TYPE_UTILISATEUR]FROM [UTILISATEUR] where NOMUTILISATEUR='" + txtUsername.Text + "' and MOT_DE_PASSE='" + txtPassword.Text + "'", B.cnx);
+            B.cmd = new SqlCommand("SELECT [NOMUTILISATEUR],[MOT_DE_PASSE],[TYPE_UTILISATEUR]FROM [dbo].[UTILISATEUR]where NOMUTILISATEUR='" + txtUsername.Text + "' and MOT_DE_PASSE='" + txtPassword.Text + "'", B.cnx);
 
             B.da = new SqlDataAdapter(B.cmd);
             DataTable dt = new DataTable();
