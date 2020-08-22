@@ -51,19 +51,19 @@
             // 
             // CMBCLIENT
             // 
+            this.CMBCLIENT.AllowDrop = true;
             this.CMBCLIENT.FormattingEnabled = true;
             this.CMBCLIENT.Location = new System.Drawing.Point(219, 204);
             this.CMBCLIENT.Name = "CMBCLIENT";
             this.CMBCLIENT.Size = new System.Drawing.Size(241, 21);
             this.CMBCLIENT.TabIndex = 3;
-            this.CMBCLIENT.SelectedIndexChanged += new System.EventHandler(this.CMBCLIENT_SelectedIndexChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel2.Location = new System.Drawing.Point(475, 222);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(402, 10);
+            this.panel2.Size = new System.Drawing.Size(289, 10);
             this.panel2.TabIndex = 5;
             // 
             // panel3
@@ -154,13 +154,15 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(567, 199);
-            this.textBox1.Multiline = true;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox1.HideSelection = false;
+            this.textBox1.Location = new System.Drawing.Point(478, 199);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 22);
+            this.textBox1.Size = new System.Drawing.Size(283, 22);
             this.textBox1.TabIndex = 8;
             this.textBox1.Text = "Rechercher";
-            this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // USER_LIST_CLIENT
             // 

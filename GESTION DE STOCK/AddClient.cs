@@ -79,5 +79,10 @@ namespace GESTION_DE_STOCK
                 MessageBox.Show(E.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clear_fields();
+        }
     }
 }
