@@ -8,8 +8,8 @@ namespace GESTION_DE_STOCK
     public partial class USER_LIST_Customer : UserControl
     {
         private DBCLASS B = new DBCLASS();
-        private static USER_LIST_CLIENT Userclient;
-        public static USER_LIST_CLIENT Instance
+        private static USER_LIST_Customer Userclient;
+        public static USER_LIST_Customer Instance
         {
             get
             {
@@ -20,13 +20,15 @@ namespace GESTION_DE_STOCK
                 return Userclient;
             }
         }
-        public USER_LIST_CLIENT()
+        public USER_LIST_Customer()
         {
             InitializeComponent();
         }
 
 
-        private void USER_LIST_CLIENT_Load(object sender, EventArgs e)
+        
+
+        private void USER_LIST_Customer_Load(object sender, EventArgs e)
         {
             B.Open();
 
@@ -37,55 +39,55 @@ namespace GESTION_DE_STOCK
             B.da = new SqlDataAdapter("SELECT [NOM_CLIENT],[PRENOM_CLIENT],[ADRESSE_CLIENT],[TELEPHONE_CLIENT],[PAYS_CLIENT],[VILLE_CLIENT],[EMAIL]FROM[CLIENT]", B.cnx);
             B.da.Fill(B.ds, "CLIENT");
 
-            dataGridView1.DataSource = B.ds.Tables["CLIENT"];
+            DGVCustomer.DataSource = B.ds.Tables["CLIENT"];
             //Replissage du combo box
             string[] comboText = { "Nom", "Prenom", "Telephon", "Ville", "Pays" };
             //string[] comboValues = { "ID_CLIENT", "NOM_CLIENT", "PRENOM_CLIENT", "ADRESSE_CLIENT", "TELEPHONE_CLIENT", "PAYS_CLIENT", "VILLE_CLIENT", "EMAIL" };
-            CMBCLIENT.Items.AddRange(comboText);
+            CMBCUSTOMER.Items.AddRange(comboText);
         }
 
-        private void BtnAddC_Click(object sender, EventArgs e)
+        private void BtnAddCu_Click(object sender, EventArgs e)
         {
             AddCustomer AC = new AddCustomer();
             AC.ShowDialog();
         }
 
-        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        private void txtCustomer_KeyUp(object sender, KeyEventArgs e)
         {
             //Rechercher
             DataView dv = B.ds.Tables["CLIENT"].DefaultView;
-            switch (CMBCLIENT.SelectedIndex)
+            switch (CMBCUSTOMER.SelectedIndex)
             {
                 case 0:
-                    dv.RowFilter = string.Format("NOM_CLIENT LIKE '%{0}%'", textBox1.Text);
-                    dataGridView1.DataSource = dv.ToTable();
+                    dv.RowFilter = string.Format("NOM_CLIENT LIKE '%{0}%'", txtCustomer.Text);
+                    DGVCustomer.DataSource = dv.ToTable();
                     break;
 
                 case 1:
-                    dv.RowFilter = string.Format("PRENOM_CLIENT LIKE '%{0}%'", textBox1.Text);
-                    dataGridView1.DataSource = dv.ToTable();
+                    dv.RowFilter = string.Format("PRENOM_CLIENT LIKE '%{0}%'", txtCustomer.Text);
+                    DGVCustomer.DataSource = dv.ToTable();
                     break;
 
                 case 2:
-                    dv.RowFilter = string.Format("TELEPHONE_CLIENT LIKE '%{0}%'", textBox1.Text);
-                    dataGridView1.DataSource = dv.ToTable();
+                    dv.RowFilter = string.Format("TELEPHONE_CLIENT LIKE '%{0}%'", txtCustomer.Text);
+                    DGVCustomer.DataSource = dv.ToTable();
                     break;
 
                 case 3:
-                    dv.RowFilter = string.Format("VILLE_CLIENT LIKE '%{0}%'", textBox1.Text);
-                    dataGridView1.DataSource = dv.ToTable();
+                    dv.RowFilter = string.Format("VILLE_CLIENT LIKE '%{0}%'", txtCustomer.Text);
+                    DGVCustomer.DataSource = dv.ToTable();
                     break;
 
                 case 4:
-                    dv.RowFilter = string.Format("PAYS_CLIENT LIKE '%{0}%'", textBox1.Text);
-                    dataGridView1.DataSource = dv.ToTable();
+                    dv.RowFilter = string.Format("PAYS_CLIENT LIKE '%{0}%'", txtCustomer.Text);
+                    DGVCustomer.DataSource = dv.ToTable();
                     break;
             }
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void txtCustomer_Enter(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            txtCustomer.Clear();
         }
     }
 }

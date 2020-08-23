@@ -117,7 +117,7 @@
             this.BtnSaveCA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSaveCA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSaveCA.ForeColor = System.Drawing.Color.White;
-            this.BtnSaveCA.Location = new System.Drawing.Point(217, 171);
+            this.BtnSaveCA.Location = new System.Drawing.Point(217, 163);
             this.BtnSaveCA.Name = "BtnSaveCA";
             this.BtnSaveCA.Size = new System.Drawing.Size(258, 46);
             this.BtnSaveCA.TabIndex = 7;

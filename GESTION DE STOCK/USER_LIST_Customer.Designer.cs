@@ -28,163 +28,163 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.CMBCLIENT = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BtnUpdateC = new System.Windows.Forms.Button();
-            this.BtnDeleteC = new System.Windows.Forms.Button();
-            this.BtnAddC = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtCustomer = new System.Windows.Forms.TextBox();
+            this.CMBCUSTOMER = new System.Windows.Forms.ComboBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.BtnUpdateCu = new System.Windows.Forms.Button();
+            this.BtnDeleteCu = new System.Windows.Forms.Button();
+            this.BtnAddCu = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.DGVCustomer = new System.Windows.Forms.DataGridView();
+            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel4
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(153, 201);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1247, 12);
-            this.panel1.TabIndex = 2;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel4.Location = new System.Drawing.Point(36, 132);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1012, 10);
+            this.panel4.TabIndex = 10;
             // 
-            // CMBCLIENT
+            // txtCustomer
             // 
-            this.CMBCLIENT.AllowDrop = true;
-            this.CMBCLIENT.FormattingEnabled = true;
-            this.CMBCLIENT.Location = new System.Drawing.Point(292, 251);
-            this.CMBCLIENT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.CMBCLIENT.Name = "CMBCLIENT";
-            this.CMBCLIENT.Size = new System.Drawing.Size(320, 24);
-            this.CMBCLIENT.TabIndex = 3;
+            this.txtCustomer.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCustomer.Location = new System.Drawing.Point(436, 187);
+            this.txtCustomer.Name = "txtCustomer";
+            this.txtCustomer.Size = new System.Drawing.Size(286, 15);
+            this.txtCustomer.TabIndex = 11;
+            this.txtCustomer.Enter += new System.EventHandler(this.txtCustomer_Enter);
+            this.txtCustomer.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCustomer_KeyUp);
             // 
-            // panel2
+            // CMBCUSTOMER
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(665, 273);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(289, 10);
-            this.panel2.TabIndex = 5;
+            this.CMBCUSTOMER.FormattingEnabled = true;
+            this.CMBCUSTOMER.Location = new System.Drawing.Point(95, 187);
+            this.CMBCUSTOMER.Name = "CMBCUSTOMER";
+            this.CMBCUSTOMER.Size = new System.Drawing.Size(291, 24);
+            this.CMBCUSTOMER.TabIndex = 12;
             // 
-            // panel3
+            // panel5
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel3.Location = new System.Drawing.Point(153, 321);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1247, 12);
-            this.panel3.TabIndex = 6;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel5.Location = new System.Drawing.Point(436, 201);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(286, 10);
+            this.panel5.TabIndex = 14;
             // 
-            // dataGridView1
+            // BtnUpdateCu
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.chkGrd});
-            this.dataGridView1.Location = new System.Drawing.Point(115, 311);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1247, 418);
-            this.dataGridView1.TabIndex = 7;
+            this.BtnUpdateCu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BtnUpdateCu.FlatAppearance.BorderSize = 0;
+            this.BtnUpdateCu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUpdateCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUpdateCu.ForeColor = System.Drawing.Color.White;
+            this.BtnUpdateCu.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_update_35;
+            this.BtnUpdateCu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnUpdateCu.Location = new System.Drawing.Point(399, 35);
+            this.BtnUpdateCu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnUpdateCu.Name = "BtnUpdateCu";
+            this.BtnUpdateCu.Size = new System.Drawing.Size(291, 60);
+            this.BtnUpdateCu.TabIndex = 8;
+            this.BtnUpdateCu.Text = "Modifier";
+            this.BtnUpdateCu.UseVisualStyleBackColor = false;
             // 
-            // chkGrd
+            // BtnDeleteCu
             // 
-            this.chkGrd.HeaderText = "Select";
-            this.chkGrd.Name = "chkGrd";
-            this.chkGrd.ReadOnly = true;
-            this.chkGrd.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.chkGrd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.BtnDeleteCu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BtnDeleteCu.FlatAppearance.BorderSize = 0;
+            this.BtnDeleteCu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDeleteCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDeleteCu.ForeColor = System.Drawing.Color.White;
+            this.BtnDeleteCu.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_waste_35;
+            this.BtnDeleteCu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnDeleteCu.Location = new System.Drawing.Point(757, 35);
+            this.BtnDeleteCu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnDeleteCu.Name = "BtnDeleteCu";
+            this.BtnDeleteCu.Size = new System.Drawing.Size(291, 60);
+            this.BtnDeleteCu.TabIndex = 7;
+            this.BtnDeleteCu.Text = "Delete";
+            this.BtnDeleteCu.UseVisualStyleBackColor = false;
             // 
-            // BtnUpdateC
+            // BtnAddCu
             // 
-            this.BtnUpdateC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.BtnUpdateC.FlatAppearance.BorderSize = 0;
-            this.BtnUpdateC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUpdateC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUpdateC.ForeColor = System.Drawing.Color.White;
-            this.BtnUpdateC.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_update_35;
-            this.BtnUpdateC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUpdateC.Location = new System.Drawing.Point(633, 87);
-            this.BtnUpdateC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnUpdateC.Name = "BtnUpdateC";
-            this.BtnUpdateC.Size = new System.Drawing.Size(291, 60);
-            this.BtnUpdateC.TabIndex = 1;
-            this.BtnUpdateC.Text = "Modifier";
-            this.BtnUpdateC.UseVisualStyleBackColor = false;
+            this.BtnAddCu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BtnAddCu.FlatAppearance.BorderSize = 0;
+            this.BtnAddCu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAddCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddCu.ForeColor = System.Drawing.Color.White;
+            this.BtnAddCu.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_add_35;
+            this.BtnAddCu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAddCu.Location = new System.Drawing.Point(36, 35);
+            this.BtnAddCu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnAddCu.Name = "BtnAddCu";
+            this.BtnAddCu.Size = new System.Drawing.Size(291, 60);
+            this.BtnAddCu.TabIndex = 6;
+            this.BtnAddCu.Text = "Add";
+            this.BtnAddCu.UseVisualStyleBackColor = false;
+            this.BtnAddCu.Click += new System.EventHandler(this.BtnAddCu_Click);
             // 
-            // BtnDeleteC
+            // panel6
             // 
-            this.BtnDeleteC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.BtnDeleteC.FlatAppearance.BorderSize = 0;
-            this.BtnDeleteC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDeleteC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeleteC.ForeColor = System.Drawing.Color.White;
-            this.BtnDeleteC.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_waste_35;
-            this.BtnDeleteC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDeleteC.Location = new System.Drawing.Point(1109, 87);
-            this.BtnDeleteC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnDeleteC.Name = "BtnDeleteC";
-            this.BtnDeleteC.Size = new System.Drawing.Size(291, 60);
-            this.BtnDeleteC.TabIndex = 1;
-            this.BtnDeleteC.Text = "Delete";
-            this.BtnDeleteC.UseVisualStyleBackColor = false;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel6.Location = new System.Drawing.Point(36, 268);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1012, 10);
+            this.panel6.TabIndex = 15;
             // 
-            // BtnAddC
+            // DGVCustomer
             // 
-            this.BtnAddC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.BtnAddC.FlatAppearance.BorderSize = 0;
-            this.BtnAddC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAddC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddC.ForeColor = System.Drawing.Color.White;
-            this.BtnAddC.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_add_35;
-            this.BtnAddC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAddC.Location = new System.Drawing.Point(153, 87);
-            this.BtnAddC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnAddC.Name = "BtnAddC";
-            this.BtnAddC.Size = new System.Drawing.Size(291, 60);
-            this.BtnAddC.TabIndex = 0;
-            this.BtnAddC.Text = "Add";
-            this.BtnAddC.UseVisualStyleBackColor = false;
-            this.BtnAddC.Click += new System.EventHandler(this.BtnAddC_Click);
+            this.DGVCustomer.AllowUserToAddRows = false;
+            this.DGVCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Select});
+            this.DGVCustomer.Location = new System.Drawing.Point(36, 300);
+            this.DGVCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.DGVCustomer.Name = "DGVCustomer";
+            this.DGVCustomer.RowHeadersWidth = 51;
+            this.DGVCustomer.RowTemplate.Height = 24;
+            this.DGVCustomer.Size = new System.Drawing.Size(1012, 418);
+            this.DGVCustomer.TabIndex = 17;
             // 
-            // textBox1
+            // Select
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(567, 199);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 22);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "Rechercher";
-            this.textBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseClick);
+            this.Select.HeaderText = "Select";
+            this.Select.MinimumWidth = 6;
+            this.Select.Name = "Select";
+            this.Select.Width = 125;
             // 
-            // USER_LIST_CLIENT
+            // label1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.CMBCLIENT);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.BtnUpdateC);
-            this.Controls.Add(this.BtnDeleteC);
-            this.Controls.Add(this.BtnAddC);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "USER_LIST_CLIENT";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(739, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 29);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Search";
+            // 
+            // USER_LIST_Customer
+            // 
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DGVCustomer);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.CMBCUSTOMER);
+            this.Controls.Add(this.txtCustomer);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.BtnUpdateCu);
+            this.Controls.Add(this.BtnDeleteCu);
+            this.Controls.Add(this.BtnAddCu);
+            this.Name = "USER_LIST_Customer";
             this.Size = new System.Drawing.Size(1452, 853);
-            this.Load += new System.EventHandler(this.USER_LIST_CLIENT_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.USER_LIST_Customer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +201,16 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BtnUpdateCu;
+        private System.Windows.Forms.Button BtnDeleteCu;
+        private System.Windows.Forms.Button BtnAddCu;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtCustomer;
+        private System.Windows.Forms.ComboBox CMBCUSTOMER;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.DataGridView DGVCustomer;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
+        private System.Windows.Forms.Label label1;
     }
 }
