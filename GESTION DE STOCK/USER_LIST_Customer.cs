@@ -107,8 +107,7 @@ namespace GESTION_DE_STOCK
                     clientId =int.Parse(dataRow.Cells[1].Value.ToString());
                 }
             }
-            MessageBox.Show(clientId.ToString());
-            UpdateCustomer UC = new UpdateCustomer(clientId, B.ds);
+            UpdateCustomer UC = new UpdateCustomer(clientId, B.ds, B.da);
             UC.ShowDialog();
         }
     }
