@@ -36,7 +36,7 @@ namespace GESTION_DE_STOCK
             {
                 B.ds.Tables["CLIENT"].Clear();
             }
-            B.da = new SqlDataAdapter("SELECT [NOM_CLIENT],[PRENOM_CLIENT],[ADRESSE_CLIENT],[TELEPHONE_CLIENT],[PAYS_CLIENT],[VILLE_CLIENT],[EMAIL]FROM[CLIENT]", B.cnx);
+            B.da = new SqlDataAdapter("SELECT [ID_CLIENT],[NOM_CLIENT],[PRENOM_CLIENT],[ADRESSE_CLIENT],[TELEPHONE_CLIENT],[PAYS_CLIENT],[VILLE_CLIENT],[EMAIL]FROM[CLIENT]", B.cnx);
             B.da.Fill(B.ds, "CLIENT");
 
             DGVCustomer.DataSource = B.ds.Tables["CLIENT"];
@@ -88,6 +88,28 @@ namespace GESTION_DE_STOCK
         private void txtCustomer_Enter(object sender, EventArgs e)
         {
             txtCustomer.Clear();
+        }
+
+        private void BtnUpdateCu_Click(object sender, EventArgs e)
+        {
+            int clientId = -1;
+            //for(int i=0; i>dataGridView1.Rows.Count; i++)
+            //{
+            //    if (dataGridView1.Rows[i].Cells["chkSelect"].Selected)
+            //    {
+            //        clientId = Convert.ToInt32(dataGridView1.Rows[i].Cells[1]);
+            //    }
+            //}
+            foreach (DataGridViewRow dataRow in DGVCustomer.Rows)
+            {
+                if (dataRow.Cells["chkSelect"].Selected)
+                {
+                    clientId =int.Parse(dataRow.Cells[1].Value.ToString());
+                }
+            }
+            MessageBox.Show(clientId.ToString());
+            UpdateCustomer UC = new UpdateCustomer(clientId, B.ds);
+            UC.ShowDialog();
         }
     }
 }

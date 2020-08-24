@@ -37,8 +37,8 @@
             this.BtnAddCu = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.DGVCustomer = new System.Windows.Forms.DataGridView();
-            this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             this.txtCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCustomer.Location = new System.Drawing.Point(436, 187);
             this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(286, 15);
+            this.txtCustomer.Size = new System.Drawing.Size(286, 13);
             this.txtCustomer.TabIndex = 11;
             this.txtCustomer.Enter += new System.EventHandler(this.txtCustomer_Enter);
             this.txtCustomer.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCustomer_KeyUp);
@@ -66,7 +66,7 @@
             this.CMBCUSTOMER.FormattingEnabled = true;
             this.CMBCUSTOMER.Location = new System.Drawing.Point(95, 187);
             this.CMBCUSTOMER.Name = "CMBCUSTOMER";
-            this.CMBCUSTOMER.Size = new System.Drawing.Size(291, 24);
+            this.CMBCUSTOMER.Size = new System.Drawing.Size(291, 21);
             this.CMBCUSTOMER.TabIndex = 12;
             // 
             // panel5
@@ -93,6 +93,7 @@
             this.BtnUpdateCu.TabIndex = 8;
             this.BtnUpdateCu.Text = "Modifier";
             this.BtnUpdateCu.UseVisualStyleBackColor = false;
+            this.BtnUpdateCu.Click += new System.EventHandler(this.BtnUpdateCu_Click);
             // 
             // BtnDeleteCu
             // 
@@ -142,7 +143,7 @@
             this.DGVCustomer.AllowUserToAddRows = false;
             this.DGVCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Select});
+            this.chkSelect});
             this.DGVCustomer.Location = new System.Drawing.Point(36, 300);
             this.DGVCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.DGVCustomer.Name = "DGVCustomer";
@@ -151,13 +152,6 @@
             this.DGVCustomer.Size = new System.Drawing.Size(1012, 418);
             this.DGVCustomer.TabIndex = 17;
             // 
-            // Select
-            // 
-            this.Select.HeaderText = "Select";
-            this.Select.MinimumWidth = 6;
-            this.Select.Name = "Select";
-            this.Select.Width = 125;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -165,9 +159,16 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(739, 180);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 29);
+            this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 18;
             this.label1.Text = "Search";
+            // 
+            // chkSelect
+            // 
+            this.chkSelect.HeaderText = "Select";
+            this.chkSelect.MinimumWidth = 6;
+            this.chkSelect.Name = "chkSelect";
+            this.chkSelect.Width = 125;
             // 
             // USER_LIST_Customer
             // 
@@ -210,7 +211,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView DGVCustomer;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chkSelect;
     }
 }
