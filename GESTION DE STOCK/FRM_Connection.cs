@@ -33,13 +33,15 @@ namespace GESTION_DE_STOCK
             try
             {
 
+                
                 B.cnx.Open();
-
                 B.cmd = new SqlCommand("SELECT [NOMUTILISATEUR],[MOT_DE_PASSE],[TYPE_UTILISATEUR]FROM [UTILISATEUR] where NOMUTILISATEUR='" + txtUsername.Text + "' and MOT_DE_PASSE='" + txtPassword.Text + "'", B.cnx);
 
                 B.da = new SqlDataAdapter(B.cmd);
                 DataTable dt = new DataTable();
+                
                 B.da.Fill(dt);
+                B.cnx.Close();
 
                 if (dt.Rows.Count > 0)
                 {
@@ -57,14 +59,16 @@ namespace GESTION_DE_STOCK
                 }
                 else
                 {
+                    B.cnx.Close();
                     MessageBox.Show(" Nom de compte ou mot de passe incorrect", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                B.cnx.Close();
+                
             }
             catch(Exception ex)
             {
+                B.cnx.Close();
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
