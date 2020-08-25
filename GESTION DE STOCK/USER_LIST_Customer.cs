@@ -89,20 +89,31 @@ namespace GESTION_DE_STOCK
         {
             txtCustomer.Clear();
         }
-
+        int clientId = -1;
         private void BtnUpdateCu_Click(object sender, EventArgs e)
         {
-            int clientId = -1;
-            //for(int i=0; i>dataGridView1.Rows.Count; i++)
+            
+            //for (int i = 0; i > DGVCustomer.Rows.Count; i++)
             //{
-            //    if (dataGridView1.Rows[i].Cells["chkSelect"].Selected)
+            //    if (DGVCustomer.Rows[i].Cells["chkSelect"].Selected)
             //    {
-            //        clientId = Convert.ToInt32(dataGridView1.Rows[i].Cells[1]);
+            //        clientId = Convert.ToInt32(DGVCustomer.Rows[i].Cells[1]);
             //    }
             //}
-            
-            UpdateCustomer UC = new UpdateCustomer(clientId, B.ds, B.da);
-            UC.ShowDialog();
+            foreach(DataGridViewRow row in DGVCustomer.Rows)
+            {
+                if (row.Cells[0].Selected)
+                {
+                    clientId = Convert.ToInt32(row.Cells[1].Value);
+                }
+            }
+            //if (clientId != -1)
+            //{
+                UpdateCustomer UC = new UpdateCustomer(clientId, B.ds, B.da);
+                UC.ShowDialog();
+            //}
+            //else
+            //    MessageBox.Show("Veuillez Cocher une ligne !");
         }
 
         private void BtnDeleteCu_Click(object sender, EventArgs e)

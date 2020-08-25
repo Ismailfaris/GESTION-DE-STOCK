@@ -37,8 +37,8 @@
             this.BtnAddCu = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.DGVCustomer = new System.Windows.Forms.DataGridView();
-            this.chkSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,13 +153,6 @@
             this.DGVCustomer.Size = new System.Drawing.Size(1012, 418);
             this.DGVCustomer.TabIndex = 17;
             // 
-            // chkSelect
-            // 
-            this.chkSelect.HeaderText = "Select";
-            this.chkSelect.MinimumWidth = 6;
-            this.chkSelect.Name = "chkSelect";
-            this.chkSelect.Width = 125;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -170,6 +163,14 @@
             this.label1.Size = new System.Drawing.Size(76, 24);
             this.label1.TabIndex = 18;
             this.label1.Text = "Search";
+            // 
+            // chkSelect
+            // 
+            this.chkSelect.HeaderText = "Select";
+            this.chkSelect.MinimumWidth = 6;
+            this.chkSelect.Name = "chkSelect";
+            this.chkSelect.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.chkSelect.Width = 50;
             // 
             // USER_LIST_Customer
             // 

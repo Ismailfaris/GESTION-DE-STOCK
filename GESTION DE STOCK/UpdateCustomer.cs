@@ -80,19 +80,27 @@ namespace GESTION_DE_STOCK
             catch (Exception ex)
             {
                 MessageBox.Show("Error :" + ex.Message);
+                this.Close();
             }
         }
 
         private void UpdateCustomer_Load(object sender, EventArgs e)
         {
-            dr = B.ds.Tables["CLIENT"].Select(string.Format("ID_CLIENT = {0}", clientId));
-            txtNom.Text = dr[0]["NOM_CLIENT"].ToString();
-            txtPrenom.Text = dr[0]["PRENOM_CLIENT"].ToString();
-            txtTel.Text = dr[0]["TELEPHONE_CLIENT"].ToString();
-            txtEmail.Text = dr[0]["EMAIL"].ToString();
-            txtVille.Text = dr[0]["VILLE_CLIENT"].ToString();
-            txtAdress.Text = dr[0]["ADRESSE_CLIENT"].ToString();
-            txtPays.Text = dr[0]["PAYS_CLIENT"].ToString();
+            try
+            {
+                dr = B.ds.Tables["CLIENT"].Select(string.Format("ID_CLIENT = {0}", clientId));
+                txtNom.Text = dr[0]["NOM_CLIENT"].ToString();
+                txtPrenom.Text = dr[0]["PRENOM_CLIENT"].ToString();
+                txtTel.Text = dr[0]["TELEPHONE_CLIENT"].ToString();
+                txtEmail.Text = dr[0]["EMAIL"].ToString();
+                txtVille.Text = dr[0]["VILLE_CLIENT"].ToString();
+                txtAdress.Text = dr[0]["ADRESSE_CLIENT"].ToString();
+                txtPays.Text = dr[0]["PAYS_CLIENT"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
