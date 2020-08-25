@@ -14,10 +14,13 @@ namespace GESTION_DE_STOCK
 {
     public partial class AddCustomer : Form
     {
-        private DBCLASS db = new DBCLASS();
-        public AddCustomer()
+        private DBCLASS B = new DBCLASS();
+        public AddCustomer(DataSet ds, SqlDataAdapter da)
         {
             InitializeComponent();
+            this.B.da = da;
+            this.B.ds = ds;
+
         }
         private bool chkTextBox_empty()
         {
@@ -50,24 +53,25 @@ namespace GESTION_DE_STOCK
             try
             {
                 bool empty = chkTextBox_empty();
+                int LastIndex = B.ds.Tables["CLIENT"].Rows.Count - 1;
+                DataRow newLign = B.ds.Tables["Client"].NewRow();
+                SqlCommandBuilder cmdB;
                 if (!empty)
                 {
-                    db.cmd = new SqlCommand("insert into " +
-                        "CLIENT( NOM_CLIENT, PRENOM_CLIENT, ADRESSE_CLIENT, TELEPHONE_CLIENT, PAYS_CLIENT, VILLE_CLIENT, EMAIL)"
-                        + "values(@nom, @prenom, @adresse, @telephone, @pays, @ville, @email)");
-                    db.cmd.Connection = db.cnx;
-                    db.cmd.Parameters.AddWithValue("@nom", txtNom.Text);
-                    db.cmd.Parameters.AddWithValue("@prenom", txtPrenom.Text);
-                    db.cmd.Parameters.AddWithValue("@adresse", txtAddress.Text);
-                    db.cmd.Parameters.AddWithValue("@telephone", txtTele.Text);
-                    db.cmd.Parameters.AddWithValue("@pays", txtPays.Text);
-                    db.cmd.Parameters.AddWithValue("@ville", txtVille.Text);
-                    db.cmd.Parameters.AddWithValue("@email", txtEmail.Text);
-                    db.Open();
-                    db.cmd.ExecuteNonQuery();
-                    db.Close();
+                    newLign["ID_CLIENT"] = (Convert.ToInt32(B.ds.Tables["CLIENT"].Rows[LastIndex][0]) + 1);
+                    newLign["NOM_CLIENT"] = txtNom.Text; 
+                    newLign["PRENOM_CLIENT"] = txtPrenom.Text;
+                    newLign["TELEPHONE_CLIENT"] = txtTele.Text;
+                    newLign["EMAIL"] = txtEmail.Text;
+                    newLign["VILLE_CLIENT"] = txtVille.Text;
+                    newLign["ADRESSE_CLIENT"] = txtAddress.Text;
+                    newLign["PAYS_CLIENT"] = txtPays.Text;
+                    B.ds.Tables["CLIENT"].Rows.Add(newLign);
+                    cmdB = new SqlCommandBuilder(B.da);
+                    B.da.InsertCommand = cmdB.GetInsertCommand();
+                    B.da.Update(B.ds, "CLIENT");
                     clear_fields();
-                    MessageBox.Show("Ajouter");
+                    MessageBox.Show("Ajouter avec succee");
 
                 }
                 else
@@ -83,6 +87,11 @@ namespace GESTION_DE_STOCK
         private void button1_Click(object sender, EventArgs e)
         {
             clear_fields();
+        }
+
+        private void AddCustomer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

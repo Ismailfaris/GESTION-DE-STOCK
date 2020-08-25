@@ -48,7 +48,7 @@ namespace GESTION_DE_STOCK
 
         private void BtnAddCu_Click(object sender, EventArgs e)
         {
-            AddCustomer AC = new AddCustomer();
+            AddCustomer AC = new AddCustomer(B.ds, B.da);
             AC.ShowDialog();
         }
 
