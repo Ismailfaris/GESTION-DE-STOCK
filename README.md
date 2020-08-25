@@ -1,2 +1,2 @@
 # GESTION-DE-STOCK
-Hiiiiiiii
+Simple Desktop application for Inventory Management
