@@ -138,8 +138,12 @@ namespace GESTION_DE_STOCK
                 if (MessageBox.Show("Ete Vou sure ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     B.ds.Tables["CLIENT"].Rows.RemoveAt(row_index);
+                    B.ds.AcceptChanges();
                     cmdB = new SqlCommandBuilder(B.da);
-                    B.da.Update(B.ds, "CLIENT");
+                    B.da.UpdateCommand = cmdB.GetUpdateCommand();
+                    B.da.DeleteCommand = cmdB.GetDeleteCommand();
+                    Console.WriteLine( B.da.Update(B.ds, "CLIENT") );
+                    
                 }
             }
             catch(Exception ex)
