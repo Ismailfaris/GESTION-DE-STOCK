@@ -123,7 +123,6 @@ namespace GESTION_DE_STOCK
             int clientId = -1;
             DataRow[] toBeDeleted;
             int row_index = -1;
-            SqlCommandBuilder cmdB;
             try
             {
                 foreach (DataGridViewRow dataRow in DGVCustomer.Rows)
@@ -137,12 +136,22 @@ namespace GESTION_DE_STOCK
                 row_index = B.ds.Tables["CLIENT"].Rows.IndexOf(toBeDeleted[0]);
                 if (MessageBox.Show("Ete Vou sure ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
+                    //For deleting the row from the DataGrid 
                     B.ds.Tables["CLIENT"].Rows.RemoveAt(row_index);
                     B.ds.AcceptChanges();
-                    cmdB = new SqlCommandBuilder(B.da);
-                    B.da.UpdateCommand = cmdB.GetUpdateCommand();
-                    B.da.DeleteCommand = cmdB.GetDeleteCommand();
-                    Console.WriteLine( B.da.Update(B.ds, "CLIENT") );
+
+                    //SqlCommandBuilder cmdB = new SqlCommandBuilder(B.da);
+                    //B.da.UpdateCommand = cmdB.GetUpdateCommand();
+                    //B.da.DeleteCommand = cmdB.GetDeleteCommand();
+                    //Console.WriteLine( B.da.Update(B.ds, "CLIENT") );
+
+                    //Delete Row from Database
+                    B.cmd = new SqlCommand("DELETE FROM CLIENT WHERE ID_CLIENT = @ID", B.cnx);
+                    B.cmd.Parameters.AddWithValue("@ID", clientId);
+                    B.Open();
+                    Console.WriteLine( B.cmd.ExecuteNonQuery() + "Row Deleted ****************");
+                    B.Close();
+
                     
                 }
             }
