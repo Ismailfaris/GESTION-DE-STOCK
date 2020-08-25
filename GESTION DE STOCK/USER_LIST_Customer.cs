@@ -111,18 +111,31 @@ namespace GESTION_DE_STOCK
             //Will be updated later for multiple deletes
             int clientId = -1;
             DataRow[] toBeDeleted;
-
-            foreach (DataGridViewRow dataRow in DGVCustomer.Rows)
+            int row_index = -1;
+            SqlCommandBuilder cmdB;
+            try
             {
-                if (dataRow.Cells["chkSelect"].Selected)
+                foreach (DataGridViewRow dataRow in DGVCustomer.Rows)
                 {
-                    clientId =int.Parse(dataRow.Cells[1].Value.ToString());
+                    if (dataRow.Cells["chkSelect"].Selected)
+                    {
+                        clientId = int.Parse(dataRow.Cells[1].Value.ToString());
+                    }
+                }
+                toBeDeleted = B.ds.Tables["CLIENT"].Select(string.Format("ID_CLIENT = {0}", clientId));
+                row_index = B.ds.Tables["CLIENT"].Rows.IndexOf(toBeDeleted[0]);
+                if (MessageBox.Show("Ete Vou sure ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    B.ds.Tables["CLIENT"].Rows.RemoveAt(row_index);
+                    cmdB = new SqlCommandBuilder(B.da);
+                    B.da.Update(B.ds, "CLIENT");
                 }
             }
-            toBeDeleted = B.ds.Tables["CLIENT"].Select(string.Format("ID_CLIENT = {0}", clientId));
-            DialogResult confirmation = MessageBox.Show("Ete Vou sure ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(confirmation == DialogResult.OK) 
-                B.ds.Tables["CLIENT"].Rows.Remove(toBeDeleted[0]);
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+            }
+            
         }
     }
 }
