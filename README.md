@@ -1,2 +1,2 @@
-# GESTION-DE-STOCK
-Hiiiiiiii
+# GESTION DE STOCK
+Simple Desktop application for Inventory Management
