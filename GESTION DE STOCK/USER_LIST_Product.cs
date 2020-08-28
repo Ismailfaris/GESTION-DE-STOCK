@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Globalization;
 
 namespace GESTION_DE_STOCK
 {
@@ -38,6 +39,7 @@ namespace GESTION_DE_STOCK
             B.da.Fill(B.ds, "PRODUITS");
             dgvProduct.DataSource = B.ds.Tables["PRODUITS"];
             dgvProduct.Columns[5].Visible = false;
+            dgvProduct.Columns[1].Visible = false;
         }
 
         private void BtnAddC_Click(object sender, EventArgs e)
@@ -48,8 +50,29 @@ namespace GESTION_DE_STOCK
 
         private void BtnUpdateP_Click(object sender, EventArgs e)
         {
-            UpdateProduct UP = new UpdateProduct();
-            UP.ShowDialog();
+            try
+            {
+                int productId = -1;
+                
+                foreach (DataGridViewRow row in dgvProduct.Rows)
+                {
+                    if (Convert.ToBoolean(row.Cells["chkSelect"].Value))
+                    {
+                        productId = Convert.ToInt32(row.Cells[1].Value);
+                    }
+                }
+                if (productId == -1)
+                    MessageBox.Show("Selectionner d'abord un produit !!");
+                else
+                {
+                    UpdateProduct UP = new UpdateProduct(B.ds, B.da, productId);
+                    UP.ShowDialog();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show( "Error : " + ex.Message);
+            }
         }
     }
 }

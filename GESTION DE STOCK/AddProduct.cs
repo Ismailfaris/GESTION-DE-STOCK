@@ -104,5 +104,10 @@ namespace GESTION_DE_STOCK
                 txtImage.Text = openFileDialog1.FileName;
             }
         }
+
+        private void BtnRefreshP_Click(object sender, EventArgs e)
+        {
+            clearFields();
+        }
     }
 }

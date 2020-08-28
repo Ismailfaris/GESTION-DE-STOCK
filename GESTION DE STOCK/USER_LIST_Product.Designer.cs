@@ -42,7 +42,7 @@
             this.BtnUpdateP = new System.Windows.Forms.Button();
             this.BtnDeleteP = new System.Windows.Forms.Button();
             this.BtnAddP = new System.Windows.Forms.Button();
-            this.chkGrd = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.chkSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,14 +94,12 @@
             // dgvProduct
             // 
             this.dgvProduct.AllowUserToAddRows = false;
-            this.dgvProduct.AllowUserToDeleteRows = false;
             this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.chkGrd});
+            this.chkSelect});
             this.dgvProduct.Location = new System.Drawing.Point(79, 242);
             this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.RowTemplate.Height = 24;
             this.dgvProduct.Size = new System.Drawing.Size(935, 340);
@@ -117,7 +115,7 @@
             this.BtnPrintAllP.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_print_351;
             this.BtnPrintAllP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPrintAllP.Location = new System.Drawing.Point(431, 602);
-            this.BtnPrintAllP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnPrintAllP.Margin = new System.Windows.Forms.Padding(2);
             this.BtnPrintAllP.Name = "BtnPrintAllP";
             this.BtnPrintAllP.Size = new System.Drawing.Size(218, 49);
             this.BtnPrintAllP.TabIndex = 18;
@@ -134,7 +132,7 @@
             this.BtnExcelP.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_microsoft_excel_2019_35;
             this.BtnExcelP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnExcelP.Location = new System.Drawing.Point(796, 602);
-            this.BtnExcelP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnExcelP.Margin = new System.Windows.Forms.Padding(2);
             this.BtnExcelP.Name = "BtnExcelP";
             this.BtnExcelP.Size = new System.Drawing.Size(218, 49);
             this.BtnExcelP.TabIndex = 17;
@@ -151,7 +149,7 @@
             this.BtnPrintPR.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_print_35;
             this.BtnPrintPR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnPrintPR.Location = new System.Drawing.Point(79, 602);
-            this.BtnPrintPR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnPrintPR.Margin = new System.Windows.Forms.Padding(2);
             this.BtnPrintPR.Name = "BtnPrintPR";
             this.BtnPrintPR.Size = new System.Drawing.Size(218, 49);
             this.BtnPrintPR.TabIndex = 16;
@@ -168,7 +166,7 @@
             this.BtnRefreshP.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_synchronize_351;
             this.BtnRefreshP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnRefreshP.Location = new System.Drawing.Point(714, 151);
-            this.BtnRefreshP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnRefreshP.Margin = new System.Windows.Forms.Padding(2);
             this.BtnRefreshP.Name = "BtnRefreshP";
             this.BtnRefreshP.Size = new System.Drawing.Size(218, 49);
             this.BtnRefreshP.TabIndex = 14;
@@ -185,7 +183,7 @@
             this.BtnshowPicP.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_photo_gallery_35;
             this.BtnshowPicP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnshowPicP.Location = new System.Drawing.Point(853, 47);
-            this.BtnshowPicP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnshowPicP.Margin = new System.Windows.Forms.Padding(2);
             this.BtnshowPicP.Name = "BtnshowPicP";
             this.BtnshowPicP.Size = new System.Drawing.Size(218, 49);
             this.BtnshowPicP.TabIndex = 5;
@@ -202,7 +200,7 @@
             this.BtnUpdateP.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_update_35;
             this.BtnUpdateP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnUpdateP.Location = new System.Drawing.Point(320, 47);
-            this.BtnUpdateP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnUpdateP.Margin = new System.Windows.Forms.Padding(2);
             this.BtnUpdateP.Name = "BtnUpdateP";
             this.BtnUpdateP.Size = new System.Drawing.Size(218, 49);
             this.BtnUpdateP.TabIndex = 4;
@@ -220,7 +218,7 @@
             this.BtnDeleteP.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_waste_35;
             this.BtnDeleteP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnDeleteP.Location = new System.Drawing.Point(589, 47);
-            this.BtnDeleteP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnDeleteP.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDeleteP.Name = "BtnDeleteP";
             this.BtnDeleteP.Size = new System.Drawing.Size(218, 49);
             this.BtnDeleteP.TabIndex = 3;
@@ -237,7 +235,7 @@
             this.BtnAddP.Image = global::GESTION_DE_STOCK.Properties.Resources.icons8_add_35;
             this.BtnAddP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAddP.Location = new System.Drawing.Point(48, 47);
-            this.BtnAddP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnAddP.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAddP.Name = "BtnAddP";
             this.BtnAddP.Size = new System.Drawing.Size(218, 49);
             this.BtnAddP.TabIndex = 2;
@@ -245,14 +243,10 @@
             this.BtnAddP.UseVisualStyleBackColor = false;
             this.BtnAddP.Click += new System.EventHandler(this.BtnAddC_Click);
             // 
-            // chkGrd
+            // chkSelect
             // 
-            this.chkGrd.HeaderText = "Select";
-            this.chkGrd.MinimumWidth = 6;
-            this.chkGrd.Name = "chkGrd";
-            this.chkGrd.ReadOnly = true;
-            this.chkGrd.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.chkGrd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.chkSelect.HeaderText = "Select";
+            this.chkSelect.Name = "chkSelect";
             // 
             // USER_LIST_Product
             // 
@@ -272,7 +266,7 @@
             this.Controls.Add(this.BtnUpdateP);
             this.Controls.Add(this.BtnDeleteP);
             this.Controls.Add(this.BtnAddP);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "USER_LIST_Product";
             this.Size = new System.Drawing.Size(1089, 693);
             this.Load += new System.EventHandler(this.USER_LIST_Product_Load);
@@ -298,6 +292,6 @@
         private System.Windows.Forms.Button BtnPrintPR;
         private System.Windows.Forms.Button BtnExcelP;
         private System.Windows.Forms.Button BtnPrintAllP;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn chkGrd;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chkSelect;
     }
 }
