@@ -34,6 +34,7 @@
             this.CMBCLIENT = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.chkSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.BtnPrintAllP = new System.Windows.Forms.Button();
             this.BtnExcelP = new System.Windows.Forms.Button();
             this.BtnPrintPR = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.BtnUpdateP = new System.Windows.Forms.Button();
             this.BtnDeleteP = new System.Windows.Forms.Button();
             this.BtnAddP = new System.Windows.Forms.Button();
-            this.chkSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +104,11 @@
             this.dgvProduct.RowTemplate.Height = 24;
             this.dgvProduct.Size = new System.Drawing.Size(935, 340);
             this.dgvProduct.TabIndex = 15;
+            // 
+            // chkSelect
+            // 
+            this.chkSelect.HeaderText = "Select";
+            this.chkSelect.Name = "chkSelect";
             // 
             // BtnPrintAllP
             // 
@@ -224,6 +229,7 @@
             this.BtnDeleteP.TabIndex = 3;
             this.BtnDeleteP.Text = "Delete";
             this.BtnDeleteP.UseVisualStyleBackColor = false;
+            this.BtnDeleteP.Click += new System.EventHandler(this.BtnDeleteP_Click);
             // 
             // BtnAddP
             // 
@@ -242,11 +248,6 @@
             this.BtnAddP.Text = "Add";
             this.BtnAddP.UseVisualStyleBackColor = false;
             this.BtnAddP.Click += new System.EventHandler(this.BtnAddC_Click);
-            // 
-            // chkSelect
-            // 
-            this.chkSelect.HeaderText = "Select";
-            this.chkSelect.Name = "chkSelect";
             // 
             // USER_LIST_Product
             // 

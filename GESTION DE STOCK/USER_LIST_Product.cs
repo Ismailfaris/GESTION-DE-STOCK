@@ -74,5 +74,36 @@ namespace GESTION_DE_STOCK
                 MessageBox.Show( "Error : " + ex.Message);
             }
         }
+
+        private void BtnDeleteP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int productId = -1;
+
+                foreach (DataGridViewRow row in dgvProduct.Rows)
+                {
+                    if (Convert.ToBoolean(row.Cells["chkSelect"].Value))
+                    {
+                        productId = Convert.ToInt32(row.Cells[1].Value);
+                    }
+                }
+                if (productId == -1)
+                    MessageBox.Show("Selectionner d'abord un produit !!");
+                else
+                {
+                    int index = B.ds.Tables["PRODUITS"].Rows.IndexOf( B.ds.Tables["PRODUITS"].Select( "ID_PRODUIT = " + productId.ToString() )[0] );
+                    B.ds.Tables["PRODUITS"].Rows[index].Delete();
+                    SqlCommandBuilder cmdB = new SqlCommandBuilder(B.da);
+                    B.da.Update(B.ds, "PRODUITS");
+                    MessageBox.Show("Supprimer avec succee. ");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message);
+            }
+        }
     }
 }
