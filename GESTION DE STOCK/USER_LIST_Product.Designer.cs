@@ -31,7 +31,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.CMBCLIENT = new System.Windows.Forms.ComboBox();
+            this.cmbSearch = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.chkSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -58,6 +58,8 @@
             this.textBox1.TabIndex = 13;
             this.textBox1.Text = "Rechercher";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // panel3
             // 
@@ -75,13 +77,13 @@
             this.panel2.Size = new System.Drawing.Size(204, 10);
             this.panel2.TabIndex = 11;
             // 
-            // CMBCLIENT
+            // cmbSearch
             // 
-            this.CMBCLIENT.FormattingEnabled = true;
-            this.CMBCLIENT.Location = new System.Drawing.Point(183, 169);
-            this.CMBCLIENT.Name = "CMBCLIENT";
-            this.CMBCLIENT.Size = new System.Drawing.Size(241, 21);
-            this.CMBCLIENT.TabIndex = 10;
+            this.cmbSearch.FormattingEnabled = true;
+            this.cmbSearch.Location = new System.Drawing.Point(183, 169);
+            this.cmbSearch.Name = "cmbSearch";
+            this.cmbSearch.Size = new System.Drawing.Size(241, 21);
+            this.cmbSearch.TabIndex = 10;
             // 
             // panel1
             // 
@@ -261,7 +263,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.CMBCLIENT);
+            this.Controls.Add(this.cmbSearch);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtnshowPicP);
             this.Controls.Add(this.BtnUpdateP);
@@ -286,7 +288,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox CMBCLIENT;
+        private System.Windows.Forms.ComboBox cmbSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnRefreshP;
         private System.Windows.Forms.DataGridView dgvProduct;

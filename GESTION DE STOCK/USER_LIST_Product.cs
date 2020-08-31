@@ -15,6 +15,7 @@ namespace GESTION_DE_STOCK
 {
     public partial class USER_LIST_Product : UserControl
     {
+        
         private DBCLASS B = new DBCLASS();
         private static USER_LIST_Product UserProduct;
         public static USER_LIST_Product Instance
@@ -35,11 +36,14 @@ namespace GESTION_DE_STOCK
 
         private void USER_LIST_Product_Load(object sender, EventArgs e)
         {
+            
             B.da = new SqlDataAdapter("SELECT ID_PRODUIT, NOM_PRODUIT, QUANTITE_PRODUIT, PRIX_PRODUIT,IMAGE_PRODUIT, ID_CATEGORIE FROM PRODUIT ", B.cnx);
             B.da.Fill(B.ds, "PRODUITS");
             dgvProduct.DataSource = B.ds.Tables["PRODUITS"];
             dgvProduct.Columns[5].Visible = false;
             dgvProduct.Columns[1].Visible = false;
+            string[] comboValue = { "Nom"};
+            cmbSearch.Items.AddRange(comboValue);
         }
 
         private void BtnAddC_Click(object sender, EventArgs e)
@@ -104,6 +108,27 @@ namespace GESTION_DE_STOCK
             {
                 MessageBox.Show("Error : " + ex.Message);
             }
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            DataView dv = B.ds.Tables["PRODUITS"].DefaultView;
+            if (dgvProduct.DataSource != null)
+                dgvProduct.DataSource = null;
+            dv.RowFilter = string.Format("NOM_PRODUIT Like '%{0}%'", textBox1.Text);
+            dgvProduct.DataSource = dv.ToTable();
+            switch (cmbSearch.SelectedItem)
+            {
+                case "Nom":
+                    dv.RowFilter = string.Format("NOM_PRODUIT Like '%{0}%'", textBox1.Text);
+                    dgvProduct.DataSource = dv.ToTable();
+                    break;
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            textBox1.Clear();
         }
     }
 }
